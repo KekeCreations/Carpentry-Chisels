@@ -1,4 +1,4 @@
-package com.kekecreations.carpentry_and_chisels.platform;
+package com.kekecreations.carpentry_and_chisels.core.platform;
 
 import com.kekecreations.carpentry_and_chisels.core.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
