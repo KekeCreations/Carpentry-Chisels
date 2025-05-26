@@ -16,6 +16,6 @@ public class CCTextureMapping {
 
 
     public static ResourceLocation getCarvedWood(Block block, String pattern) {
-        return new ResourceLocation("carpentry_and_chisels:block/" + block.getName() + "_" + pattern);
+        return new ResourceLocation(TextureMapping.getBlockTexture(block) + "_" + pattern);
     }
 }

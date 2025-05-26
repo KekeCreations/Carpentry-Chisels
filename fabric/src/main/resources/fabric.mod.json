@@ -1,6 +1,6 @@
 {
     "schemaVersion": 1,
-    "id": "mod_id",
+    "id": "carpentry_and_chisels",
     "version": "${version}",
     "name": "${mod_name}",
     "description": "${description}",
@@ -17,6 +17,9 @@
     "entrypoints": {
         "main": [
             "com.kekecreations.carpentry_and_chisels.FabricCarpentryAndChisels"
+        ],
+        "fabric-datagen": [
+            "com.kekecreations.carpentry_and_chisels.datagen.CCDataGenerator"
         ]
     },
     "mixins": [
@@ -28,9 +31,6 @@
         "fabric": "*",
         "minecraft": "${minecraft_version}",
         "java": ">=17"
-    },
-    "suggests": {
-        "another-mod": "*"
     }
 }
   

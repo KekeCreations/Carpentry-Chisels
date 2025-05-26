@@ -19,4 +19,10 @@ public class FabricRegistryHelper implements IRegistryHelper {
         Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Constants.MOD_ID, id), new BlockItem(block, new Item.Properties()));
         return () -> block;
     }
+
+    @Override
+    public <T extends Item> Supplier<T> registerItem(String id, Supplier<T> itemSupplier) {
+        var item = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Constants.MOD_ID, id), itemSupplier.get());
+        return () -> item;
+    }
 }

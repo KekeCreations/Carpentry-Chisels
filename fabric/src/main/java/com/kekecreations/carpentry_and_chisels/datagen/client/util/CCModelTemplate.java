@@ -12,6 +12,6 @@ public class CCModelTemplate {
 
 
     static {
-        CARVEDWOOD = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(Constants.MOD_ID, "plaster_model").withPrefix("block/")), Optional.empty(), new TextureSlot[]{TextureSlot.TEXTURE, TextureSlot.PARTICLE});
+        CARVEDWOOD = new ModelTemplate(Optional.of(ResourceLocation.tryBuild(Constants.MOD_ID, "carved_wood").withPrefix("block/")), Optional.empty(), new TextureSlot[]{TextureSlot.TEXTURE, TextureSlot.PARTICLE});
     }
 }

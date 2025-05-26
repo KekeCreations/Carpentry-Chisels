@@ -21,4 +21,9 @@ public class ForgeRegistryHelper implements IRegistryHelper {
         ITEMS.register(id, () -> new BlockItem(block.get(), new Item.Properties()));
         return block;
     }
+
+    @Override
+    public <T extends Item> Supplier<T> registerItem(String id, Supplier<T> itemSupplier) {
+        return ITEMS.register(id, itemSupplier);
+    }
 }
