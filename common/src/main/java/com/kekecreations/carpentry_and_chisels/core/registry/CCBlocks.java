@@ -13,7 +13,14 @@ import java.util.function.Supplier;
 public class CCBlocks {
 
 
-    public static final Supplier<Block> CARVED_OAK_WOOD = registerBlockWithItem("carved_oak_wood", () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+    public static final Supplier<Block> CARVED_OAK_WOOD = registerBlockWithItem("carved_oak_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Supplier<Block> CARVED_DARK_OAK_WOOD = registerBlockWithItem("carved_dark_oak_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Supplier<Block> CARVED_ACACIA_WOOD = registerBlockWithItem("carved_acacia_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
 
     private static <T extends Block> Supplier<T> registerBlockWithItem(String name, java.util.function.Supplier<T> blockSupplier) {
         return Services.REGISTRY.registerBlockWithItem(name, blockSupplier);

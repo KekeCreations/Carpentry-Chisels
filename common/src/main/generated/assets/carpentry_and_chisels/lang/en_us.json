@@ -1,4 +1,6 @@
 {
+  "block.carpentry_and_chisels.carved_acacia_wood": "Acacia Carved Wood",
+  "block.carpentry_and_chisels.carved_dark_oak_wood": "Dark Oak Carved Wood",
   "block.carpentry_and_chisels.carved_oak_wood": "Oak Carved Wood",
   "item.carpentry_and_chisels.chisel": "Chisel",
   "tooltip.carpentry_and_chisels.pattern_0": "No Pattern",

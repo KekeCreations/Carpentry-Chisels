@@ -14,6 +14,8 @@ public class CCLanguageProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder builder) {
         builder.add(CCBlocks.CARVED_OAK_WOOD.get(), "Oak Carved Wood");
+        builder.add(CCBlocks.CARVED_DARK_OAK_WOOD.get(), "Dark Oak Carved Wood");
+        builder.add(CCBlocks.CARVED_ACACIA_WOOD.get(), "Acacia Carved Wood");
         builder.add(CCItems.CHISEL.get(), "Chisel");
 
         builder.add("tooltip.carpentry_and_chisels.pattern_0", "No Pattern");

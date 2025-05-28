@@ -27,6 +27,8 @@ public class CCModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockModelGenerators generator) {
         carvedWoodBlock(generator, CCBlocks.CARVED_OAK_WOOD.get());
+        carvedWoodBlock(generator, CCBlocks.CARVED_DARK_OAK_WOOD.get());
+        carvedWoodBlock(generator, CCBlocks.CARVED_ACACIA_WOOD.get());
 
 
     }

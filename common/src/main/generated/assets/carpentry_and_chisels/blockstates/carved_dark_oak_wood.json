@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "pattern=0": {
+      "model": "carpentry_and_chisels:block/carved_dark_oak_wood"
+    },
+    "pattern=1": {
+      "model": "carpentry_and_chisels:block/carved_dark_oak_wood_1"
+    },
+    "pattern=2": {
+      "model": "carpentry_and_chisels:block/carved_dark_oak_wood_2"
+    },
+    "pattern=3": {
+      "model": "carpentry_and_chisels:block/carved_dark_oak_wood_3"
+    },
+    "pattern=4": {
+      "model": "carpentry_and_chisels:block/carved_dark_oak_wood_4"
+    },
+    "pattern=5": {
+      "model": "carpentry_and_chisels:block/carved_dark_oak_wood_5"
+    },
+    "pattern=6": {
+      "model": "carpentry_and_chisels:block/carved_dark_oak_wood_6"
+    },
+    "pattern=7": {
+      "model": "carpentry_and_chisels:block/carved_dark_oak_wood_7"
+    }
+  }
+}

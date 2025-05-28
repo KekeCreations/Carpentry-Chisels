@@ -1,7 +1,6 @@
 package com.kekecreations.carpentry_and_chisels.common.item;
 
 import com.kekecreations.carpentry_and_chisels.common.block.CarvedWoodBlock;
-import com.kekecreations.carpentry_and_chisels.core.registry.CCBlocks;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -12,6 +11,7 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -21,7 +21,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -39,7 +38,7 @@ public class ChiselItem extends Item {
         if (compoundTag != null && compoundTag.contains("ChiselPattern")) {
             return compoundTag.getInt(TAG_CHISEL_PATTERN);
         } else {
-            return 100;
+            return 0;
         }
     }
     public void setPattern(ItemStack itemStack, int pattern) {
@@ -105,7 +104,16 @@ public class ChiselItem extends Item {
     }
 
     @Override
-    public void appendHoverText(@NotNull ItemStack itemStack, @Nullable Level level, @NotNull List<Component> toolTipComponents, @NotNull TooltipFlag flag) {
+    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
+        if (!level.isClientSide()) {
+            System.out.println(getPattern(stack));
+            //setPattern(stack, 0);
+        }
+        super.inventoryTick(stack, level, entity, slotId, isSelected);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> toolTipComponents, TooltipFlag flag) {
         super.appendHoverText(itemStack, level, toolTipComponents, flag);
         if (level != null ) {
             switch (getPattern(itemStack)) {

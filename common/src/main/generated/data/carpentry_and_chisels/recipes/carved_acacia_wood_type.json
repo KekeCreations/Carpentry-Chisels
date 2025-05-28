@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:acacia_slab"
+    }
+  },
+  "pattern": [
+    "KK"
+  ],
+  "result": {
+    "item": "carpentry_and_chisels:carved_acacia_wood"
+  },
+  "show_notification": true
+}

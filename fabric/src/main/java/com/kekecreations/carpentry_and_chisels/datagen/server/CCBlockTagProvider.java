@@ -20,6 +20,8 @@ public class CCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     private void axe() {
         this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+                .add(CCBlocks.CARVED_DARK_OAK_WOOD.get())
+                .add(CCBlocks.CARVED_ACACIA_WOOD.get())
                 .add(CCBlocks.CARVED_OAK_WOOD.get());
     }
 }

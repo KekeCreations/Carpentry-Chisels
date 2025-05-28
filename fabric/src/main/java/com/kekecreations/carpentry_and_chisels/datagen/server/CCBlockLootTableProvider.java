@@ -12,5 +12,7 @@ public class CCBlockLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         dropSelf(CCBlocks.CARVED_OAK_WOOD.get());
+        dropSelf(CCBlocks.CARVED_DARK_OAK_WOOD.get());
+        dropSelf(CCBlocks.CARVED_ACACIA_WOOD.get());
     }
 }

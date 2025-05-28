@@ -61,6 +61,7 @@ tasks.named("sourcesJar", Jar) {
 }
 
 processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from project(":common").sourceSets.main.resources
 }
 

@@ -19,6 +19,8 @@ public class CCRecipeProvider extends FabricRecipeProvider {
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> consumer) {
         carvedWoodRecipe(Blocks.OAK_SLAB, CCBlocks.CARVED_OAK_WOOD.get(), consumer);
+        carvedWoodRecipe(Blocks.DARK_OAK_SLAB, CCBlocks.CARVED_DARK_OAK_WOOD.get(), consumer);
+        carvedWoodRecipe(Blocks.ACACIA_SLAB, CCBlocks.CARVED_ACACIA_WOOD.get(), consumer);
 
     }
 
