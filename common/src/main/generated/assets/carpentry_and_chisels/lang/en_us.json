@@ -1,4 +1,12 @@
 {
   "block.carpentry_and_chisels.carved_oak_wood": "Oak Carved Wood",
-  "item.carpentry_and_chisels.chisel": "Chisel"
+  "item.carpentry_and_chisels.chisel": "Chisel",
+  "tooltip.carpentry_and_chisels.pattern_0": "No Pattern",
+  "tooltip.carpentry_and_chisels.pattern_1": "Swirl Pattern",
+  "tooltip.carpentry_and_chisels.pattern_2": "Target Pattern",
+  "tooltip.carpentry_and_chisels.pattern_3": "Cross Pattern",
+  "tooltip.carpentry_and_chisels.pattern_4": "Stripe Pattern",
+  "tooltip.carpentry_and_chisels.pattern_5": "Star Pattern",
+  "tooltip.carpentry_and_chisels.pattern_6": "Wave Pattern",
+  "tooltip.carpentry_and_chisels.pattern_7": "Bubble Pattern"
 }

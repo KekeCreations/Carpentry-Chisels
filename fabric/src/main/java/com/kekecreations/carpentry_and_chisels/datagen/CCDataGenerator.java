@@ -2,6 +2,9 @@ package com.kekecreations.carpentry_and_chisels.datagen;
 
 import com.kekecreations.carpentry_and_chisels.datagen.client.CCLanguageProvider;
 import com.kekecreations.carpentry_and_chisels.datagen.client.CCModelProvider;
+import com.kekecreations.carpentry_and_chisels.datagen.server.CCBlockLootTableProvider;
+import com.kekecreations.carpentry_and_chisels.datagen.server.CCBlockTagProvider;
+import com.kekecreations.carpentry_and_chisels.datagen.server.CCRecipeProvider;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
@@ -12,10 +15,10 @@ public class CCDataGenerator implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = generator.createPack();
 
         // Server Data
-        //pack.addProvider(ACCBlockTagProvider::new);
+        pack.addProvider(CCBlockTagProvider::new);
         //pack.addProvider(ACCItemTagProvider::new);
-        //pack.addProvider(ACCRecipeProvider::new);
-        //pack.addProvider(ACCBlockLootTableProvider::new);
+        pack.addProvider(CCRecipeProvider::new);
+        pack.addProvider(CCBlockLootTableProvider::new);
 
         // Client Data
         pack.addProvider(CCModelProvider::new);
