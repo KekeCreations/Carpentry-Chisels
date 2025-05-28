@@ -104,15 +104,6 @@ public class ChiselItem extends Item {
     }
 
     @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int slotId, boolean isSelected) {
-        if (!level.isClientSide()) {
-            System.out.println(getPattern(stack));
-            //setPattern(stack, 0);
-        }
-        super.inventoryTick(stack, level, entity, slotId, isSelected);
-    }
-
-    @Override
     public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> toolTipComponents, TooltipFlag flag) {
         super.appendHoverText(itemStack, level, toolTipComponents, flag);
         if (level != null ) {
