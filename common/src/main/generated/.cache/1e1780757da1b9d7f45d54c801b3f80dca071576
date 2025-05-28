@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-28T05:29:32.7081758	Carpentry & Chisels/Model Definitions
+// 1.20.1	2025-05-28T06:24:23.5562008	Carpentry & Chisels/Model Definitions
 394d6f261514c72a14bfe2ef9e9fb6fc48aae0fe assets\carpentry_and_chisels\models\block\carved_oak_wood_3.json
 2ee3a2519ec53ee4d3ab5d1b3f2ff835e1fd4e5e assets\carpentry_and_chisels\models\block\carved_dark_oak_wood_1.json
 7d1ddd07383378c998fcb0617e1ebd408fd214b7 assets\carpentry_and_chisels\models\block\carved_acacia_wood.json
@@ -16,8 +16,8 @@ f7cff4cd9cc24eec93ff4d362d69b9a39abdcdfc assets\carpentry_and_chisels\models\blo
 6708d56f45803d79f635b46400e6d2db54c6d4a5 assets\carpentry_and_chisels\models\block\carved_oak_wood_4.json
 44e1f6ad24e5d1e592106c5090d09732868ef038 assets\carpentry_and_chisels\models\block\carved_acacia_wood_2.json
 8c1006a57f944332afdb7712e40bb414c0d00fa8 assets\carpentry_and_chisels\models\block\carved_acacia_wood_5.json
-e2502346c484a6677bb46b93131b8582507e9bc2 assets\carpentry_and_chisels\models\item\carved_oak_wood.json
 c2266d5d0cc0703cde6cfeb870db434f43a01dfe assets\carpentry_and_chisels\models\block\carved_dark_oak_wood_5.json
+e2502346c484a6677bb46b93131b8582507e9bc2 assets\carpentry_and_chisels\models\item\carved_oak_wood.json
 4edf970b53cf3a89454cdcd3ba5507024d42b4e9 assets\carpentry_and_chisels\models\block\carved_oak_wood_5.json
 5894fe000d52dc511326ed0bdb2286d51be7f239 assets\carpentry_and_chisels\models\block\carved_dark_oak_wood_3.json
 ab32c76fc2d9c223f04657bee772b1da653a1a26 assets\carpentry_and_chisels\blockstates\carved_dark_oak_wood.json

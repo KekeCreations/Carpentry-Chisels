@@ -1,7 +1,11 @@
 package com.kekecreations.carpentry_and_chisels.common.item;
 
 import com.kekecreations.carpentry_and_chisels.common.block.CarvedWoodBlock;
+import com.mojang.blaze3d.platform.InputConstants;
+import com.sun.jna.platform.KeyboardUtils;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.player.KeyboardInput;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -95,9 +99,11 @@ public class ChiselItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
         ItemStack itemStack = player.getItemInHand(usedHand);
         if (!level.isClientSide()) {
-            if (getPattern(itemStack) != 0) {
-                setPattern(itemStack, 0);
-                level.playSound(null, player.getOnPos(), SoundEvents.ANVIL_USE, SoundSource.BLOCKS, 0.8F, 0.8F);
+            if (player.isShiftKeyDown()) {
+                if (getPattern(itemStack) != 0) {
+                    setPattern(itemStack, 0);
+                    level.playSound(null, player.getOnPos(), SoundEvents.ANVIL_USE, SoundSource.BLOCKS, 0.8F, 0.8F);
+                }
             }
         }
         return InteractionResultHolder.fail(itemStack);
@@ -116,6 +122,14 @@ public class ChiselItem extends Item {
                 case 5 -> toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.pattern_5").withStyle(ChatFormatting.GRAY));
                 case 6 -> toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.pattern_6").withStyle(ChatFormatting.GRAY));
                 case 7 -> toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.pattern_7").withStyle(ChatFormatting.GRAY));
+            }
+            toolTipComponents.add(Component.literal(""));
+            if (InputConstants.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), Minecraft.getInstance().options.keyShift.getDefaultKey().getValue())) {
+                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.control_1").withStyle(ChatFormatting.RED));
+                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.control_2").withStyle(ChatFormatting.RED));
+                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.control_3").withStyle(ChatFormatting.RED));
+            } else {
+                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.show").withStyle(ChatFormatting.RED));
             }
         }
     }

@@ -26,6 +26,10 @@ public class CCLanguageProvider extends FabricLanguageProvider {
         builder.add("tooltip.carpentry_and_chisels.pattern_5", "Star Pattern");
         builder.add("tooltip.carpentry_and_chisels.pattern_6", "Wave Pattern");
         builder.add("tooltip.carpentry_and_chisels.pattern_7", "Bubble Pattern");
+        builder.add("tooltip.carpentry_and_chisels.show", "[Shift to show controls]");
+        builder.add("tooltip.carpentry_and_chisels.control_1", "Interact to cycle pattern or carve saved pattern");
+        builder.add("tooltip.carpentry_and_chisels.control_2", "Shift interact carved wood to save pattern");
+        builder.add("tooltip.carpentry_and_chisels.control_3", "Shift interact air to clear saved pattern");
 
     }
 }

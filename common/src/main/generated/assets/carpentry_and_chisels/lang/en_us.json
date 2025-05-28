@@ -3,6 +3,9 @@
   "block.carpentry_and_chisels.carved_dark_oak_wood": "Carved Dark Oak Wood",
   "block.carpentry_and_chisels.carved_oak_wood": "Carved Oak Wood",
   "item.carpentry_and_chisels.chisel": "Chisel",
+  "tooltip.carpentry_and_chisels.control_1": "Interact to cycle pattern or carve saved pattern",
+  "tooltip.carpentry_and_chisels.control_2": "Shift interact carved wood to save pattern",
+  "tooltip.carpentry_and_chisels.control_3": "Shift interact air to clear saved pattern",
   "tooltip.carpentry_and_chisels.pattern_0": "No Pattern",
   "tooltip.carpentry_and_chisels.pattern_1": "Swirl Pattern",
   "tooltip.carpentry_and_chisels.pattern_2": "Target Pattern",
@@ -10,5 +13,6 @@
   "tooltip.carpentry_and_chisels.pattern_4": "Stripe Pattern",
   "tooltip.carpentry_and_chisels.pattern_5": "Star Pattern",
   "tooltip.carpentry_and_chisels.pattern_6": "Wave Pattern",
-  "tooltip.carpentry_and_chisels.pattern_7": "Bubble Pattern"
+  "tooltip.carpentry_and_chisels.pattern_7": "Bubble Pattern",
+  "tooltip.carpentry_and_chisels.show": "[Shift to show controls]"
 }
