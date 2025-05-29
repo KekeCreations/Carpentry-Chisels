@@ -18,6 +18,9 @@ import net.minecraft.data.models.model.ModelTemplates;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.SlabType;
 
 public class CCModelProvider extends FabricModelProvider {
     public CCModelProvider(FabricDataOutput output) {
@@ -37,6 +40,9 @@ public class CCModelProvider extends FabricModelProvider {
         carvedWoodBlock(generator, CCBlocks.CARVED_MANGROVE_WOOD.get());
         carvedWoodBlock(generator, CCBlocks.CARVED_SPRUCE_WOOD.get());
         carvedWoodBlock(generator, CCBlocks.CARVED_WARPED_WOOD.get());
+
+        slab(generator, CCBlocks.OAK_LOG_SLAB.get(), Blocks.OAK_LOG);
+        slab(generator, CCBlocks.STRIPPED_OAK_LOG_SLAB.get(), Blocks.STRIPPED_OAK_LOG);
 
 
     }
@@ -75,5 +81,19 @@ public class CCModelProvider extends FabricModelProvider {
                         .select(7, Variant.variant()
                                 .with(VariantProperties.MODEL, model7))
                 ));
+    }
+
+    public static void slab(BlockModelGenerators generator, Block block, Block logBlock) {
+        ResourceLocation bottomModel = CCModelTemplate.SLAB.create(block, CCTextureMapping.slabTextureMappings(logBlock), generator.modelOutput);
+        ResourceLocation topModel = CCModelTemplate.TOP_SLAB.create(ResourceLocation.tryParse(TextureMapping.getBlockTexture(block) + "_top"), CCTextureMapping.slabTextureMappings(logBlock), generator.modelOutput);
+        ResourceLocation doubleModel = CCModelTemplate.CUBE_COLUMN.create(ResourceLocation.tryParse(TextureMapping.getBlockTexture(block) + "_double"), CCTextureMapping.logTextureMappings(logBlock), generator.modelOutput);
+        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(block)
+                .with(PropertyDispatch.property(BlockStateProperties.SLAB_TYPE)
+                        .select(SlabType.BOTTOM, Variant.variant()
+                                .with(VariantProperties.MODEL, bottomModel))
+                        .select(SlabType.TOP, Variant.variant()
+                                .with(VariantProperties.MODEL, topModel))
+                        .select(SlabType.DOUBLE, Variant.variant()
+                                .with(VariantProperties.MODEL, doubleModel))));
     }
 }
