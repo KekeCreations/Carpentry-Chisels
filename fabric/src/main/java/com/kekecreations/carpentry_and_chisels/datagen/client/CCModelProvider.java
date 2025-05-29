@@ -43,6 +43,26 @@ public class CCModelProvider extends FabricModelProvider {
 
         slab(generator, CCBlocks.OAK_LOG_SLAB.get(), Blocks.OAK_LOG);
         slab(generator, CCBlocks.STRIPPED_OAK_LOG_SLAB.get(), Blocks.STRIPPED_OAK_LOG);
+        slab(generator, CCBlocks.DARK_OAK_LOG_SLAB.get(), Blocks.DARK_OAK_LOG);
+        slab(generator, CCBlocks.STRIPPED_DARK_OAK_LOG_SLAB.get(), Blocks.STRIPPED_DARK_OAK_LOG);
+        slab(generator, CCBlocks.ACACIA_LOG_SLAB.get(), Blocks.ACACIA_LOG);
+        slab(generator, CCBlocks.STRIPPED_ACACIA_LOG_SLAB.get(), Blocks.STRIPPED_ACACIA_LOG);
+        slab(generator, CCBlocks.BAMBOO_BLOCK_SLAB.get(), Blocks.BAMBOO_BLOCK);
+        slab(generator, CCBlocks.STRIPPED_BAMBOO_BLOCK_SLAB.get(), Blocks.STRIPPED_BAMBOO_BLOCK);
+        slab(generator, CCBlocks.BIRCH_LOG_SLAB.get(), Blocks.BIRCH_LOG);
+        slab(generator, CCBlocks.STRIPPED_BIRCH_LOG_SLAB.get(), Blocks.STRIPPED_BIRCH_LOG);
+        slab(generator, CCBlocks.CHERRY_LOG_SLAB.get(), Blocks.CHERRY_LOG);
+        slab(generator, CCBlocks.STRIPPED_CHERRY_LOG_SLAB.get(), Blocks.STRIPPED_CHERRY_LOG);
+        slab(generator, CCBlocks.CRIMSON_STEM_SLAB.get(), Blocks.CRIMSON_STEM);
+        slab(generator, CCBlocks.STRIPPED_CRIMSON_STEM_SLAB.get(), Blocks.STRIPPED_CRIMSON_STEM);
+        slab(generator, CCBlocks.JUNGLE_LOG_SLAB.get(), Blocks.JUNGLE_LOG);
+        slab(generator, CCBlocks.STRIPPED_JUNGLE_LOG_SLAB.get(), Blocks.STRIPPED_JUNGLE_LOG);
+        slab(generator, CCBlocks.MANGROVE_LOG_SLAB.get(), Blocks.MANGROVE_LOG);
+        slab(generator, CCBlocks.STRIPPED_MANGROVE_LOG_SLAB.get(), Blocks.STRIPPED_MANGROVE_LOG);
+        slab(generator, CCBlocks.SPRUCE_LOG_SLAB.get(), Blocks.SPRUCE_LOG);
+        slab(generator, CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get(), Blocks.STRIPPED_SPRUCE_LOG);
+        slab(generator, CCBlocks.WARPED_STEM_SLAB.get(), Blocks.WARPED_STEM);
+        slab(generator, CCBlocks.STRIPPED_WARPED_STEM_SLAB.get(), Blocks.STRIPPED_WARPED_STEM);
 
 
     }

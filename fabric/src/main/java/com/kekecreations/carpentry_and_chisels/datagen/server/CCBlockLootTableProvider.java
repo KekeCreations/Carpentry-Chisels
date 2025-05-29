@@ -3,6 +3,7 @@ package com.kekecreations.carpentry_and_chisels.datagen.server;
 import com.kekecreations.carpentry_and_chisels.core.registry.CCBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.world.level.block.Block;
 
 public class CCBlockLootTableProvider extends FabricBlockLootTableProvider {
     public CCBlockLootTableProvider(FabricDataOutput dataOutput) {
@@ -22,5 +23,33 @@ public class CCBlockLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(CCBlocks.CARVED_MANGROVE_WOOD.get());
         dropSelf(CCBlocks.CARVED_SPRUCE_WOOD.get());
         dropSelf(CCBlocks.CARVED_WARPED_WOOD.get());
+
+
+        slabDrop(CCBlocks.OAK_LOG_SLAB.get());
+        slabDrop(CCBlocks.DARK_OAK_LOG_SLAB.get());
+        slabDrop(CCBlocks.ACACIA_LOG_SLAB.get());
+        slabDrop(CCBlocks.BAMBOO_BLOCK_SLAB.get());
+        slabDrop(CCBlocks.BIRCH_LOG_SLAB.get());
+        slabDrop(CCBlocks.CHERRY_LOG_SLAB.get());
+        slabDrop(CCBlocks.CRIMSON_STEM_SLAB.get());
+        slabDrop(CCBlocks.JUNGLE_LOG_SLAB.get());
+        slabDrop(CCBlocks.MANGROVE_LOG_SLAB.get());
+        slabDrop(CCBlocks.SPRUCE_LOG_SLAB.get());
+        slabDrop(CCBlocks.WARPED_STEM_SLAB.get());
+
+        slabDrop(CCBlocks.STRIPPED_OAK_LOG_SLAB.get());
+        slabDrop(CCBlocks.STRIPPED_DARK_OAK_LOG_SLAB.get());
+        slabDrop(CCBlocks.STRIPPED_ACACIA_LOG_SLAB.get());
+        slabDrop(CCBlocks.STRIPPED_BAMBOO_BLOCK_SLAB.get());
+        slabDrop(CCBlocks.STRIPPED_BIRCH_LOG_SLAB.get());
+        slabDrop(CCBlocks.STRIPPED_CHERRY_LOG_SLAB.get());
+        slabDrop(CCBlocks.STRIPPED_CRIMSON_STEM_SLAB.get());
+        slabDrop(CCBlocks.STRIPPED_JUNGLE_LOG_SLAB.get());
+        slabDrop(CCBlocks.STRIPPED_MANGROVE_LOG_SLAB.get());
+        slabDrop(CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get());
+        slabDrop(CCBlocks.STRIPPED_WARPED_STEM_SLAB.get());
+    }
+    public void slabDrop(Block block) {
+        add(block, createSlabItemTable(block));
     }
 }

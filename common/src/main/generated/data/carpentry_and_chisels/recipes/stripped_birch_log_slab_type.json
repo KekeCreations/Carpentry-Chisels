@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:stripped_birch_log"
+    }
+  },
+  "pattern": [
+    "KKK"
+  ],
+  "result": {
+    "count": 6,
+    "item": "carpentry_and_chisels:stripped_birch_log_slab"
+  },
+  "show_notification": true
+}

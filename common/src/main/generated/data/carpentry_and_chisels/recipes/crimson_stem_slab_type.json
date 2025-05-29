@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:crimson_stem"
+    }
+  },
+  "pattern": [
+    "KKK"
+  ],
+  "result": {
+    "count": 6,
+    "item": "carpentry_and_chisels:crimson_stem_slab"
+  },
+  "show_notification": true
+}

@@ -30,6 +30,31 @@ public class CCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(CCBlocks.CARVED_MANGROVE_WOOD.get())
                 .add(CCBlocks.CARVED_SPRUCE_WOOD.get())
                 .add(CCBlocks.CARVED_WARPED_WOOD.get())
-                .add(CCBlocks.CARVED_OAK_WOOD.get());
+                .add(CCBlocks.CARVED_OAK_WOOD.get())
+
+                .add(CCBlocks.DARK_OAK_LOG_SLAB.get())
+                .add(CCBlocks.ACACIA_LOG_SLAB.get())
+                .add(CCBlocks.BAMBOO_BLOCK_SLAB.get())
+                .add(CCBlocks.BIRCH_LOG_SLAB.get())
+                .add(CCBlocks.CHERRY_LOG_SLAB.get())
+                .add(CCBlocks.CRIMSON_STEM_SLAB.get())
+                .add(CCBlocks.JUNGLE_LOG_SLAB.get())
+                .add(CCBlocks.MANGROVE_LOG_SLAB.get())
+                .add(CCBlocks.SPRUCE_LOG_SLAB.get())
+                .add(CCBlocks.WARPED_STEM_SLAB.get())
+                .add(CCBlocks.OAK_LOG_SLAB.get())
+
+                .add(CCBlocks.STRIPPED_DARK_OAK_LOG_SLAB.get())
+                .add(CCBlocks.STRIPPED_ACACIA_LOG_SLAB.get())
+                .add(CCBlocks.STRIPPED_BAMBOO_BLOCK_SLAB.get())
+                .add(CCBlocks.STRIPPED_BIRCH_LOG_SLAB.get())
+                .add(CCBlocks.STRIPPED_CHERRY_LOG_SLAB.get())
+                .add(CCBlocks.STRIPPED_CRIMSON_STEM_SLAB.get())
+                .add(CCBlocks.STRIPPED_JUNGLE_LOG_SLAB.get())
+                .add(CCBlocks.STRIPPED_MANGROVE_LOG_SLAB.get())
+                .add(CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get())
+                .add(CCBlocks.STRIPPED_WARPED_STEM_SLAB.get())
+                .add(CCBlocks.STRIPPED_OAK_LOG_SLAB.get())
+        ;
     }
 }

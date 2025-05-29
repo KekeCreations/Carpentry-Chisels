@@ -25,6 +25,11 @@ public class CCItemGroupEvent {
             event.addAfter(Blocks.MANGROVE_SLAB, CCBlocks.CARVED_MANGROVE_WOOD.get());
             event.addAfter(Blocks.SPRUCE_SLAB, CCBlocks.CARVED_SPRUCE_WOOD.get());
             event.addAfter(Blocks.WARPED_SLAB, CCBlocks.CARVED_WARPED_WOOD.get());
+
+            event.addAfter(Blocks.OAK_WOOD, CCBlocks.OAK_LOG_SLAB.get());
+
+
+            event.addAfter(Blocks.STRIPPED_OAK_WOOD, CCBlocks.STRIPPED_OAK_LOG_SLAB.get());
         });
     }
 }

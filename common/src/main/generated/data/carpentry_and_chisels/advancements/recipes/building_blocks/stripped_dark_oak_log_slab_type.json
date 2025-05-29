@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:stripped_dark_oak_log_slab_type"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "stripped_dark_oak_log_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:stripped_dark_oak_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "stripped_dark_oak_log_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:stripped_dark_oak_log_slab_type"
+    ]
+  },
+  "sends_telemetry_event": false
+}

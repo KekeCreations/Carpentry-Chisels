@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:spruce_log"
+    }
+  },
+  "pattern": [
+    "KKK"
+  ],
+  "result": {
+    "count": 6,
+    "item": "carpentry_and_chisels:spruce_log_slab"
+  },
+  "show_notification": true
+}

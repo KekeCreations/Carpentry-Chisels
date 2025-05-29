@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "carpentry_and_chisels:block/birch_log_slab"
+    },
+    "type=double": {
+      "model": "carpentry_and_chisels:block/birch_log_slab_double"
+    },
+    "type=top": {
+      "model": "carpentry_and_chisels:block/birch_log_slab_top"
+    }
+  }
+}

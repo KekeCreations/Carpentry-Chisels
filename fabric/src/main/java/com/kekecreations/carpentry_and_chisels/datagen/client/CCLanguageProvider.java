@@ -26,6 +26,30 @@ public class CCLanguageProvider extends FabricLanguageProvider {
         builder.add(CCBlocks.CARVED_WARPED_WOOD.get(), "Carved Warped Wood");
         builder.add(CCItems.CHISEL.get(), "Chisel");
 
+        builder.add(CCBlocks.OAK_LOG_SLAB.get(), "Oak Log Slab");
+        builder.add(CCBlocks.DARK_OAK_LOG_SLAB.get(), "Dark Oak Log Slab");
+        builder.add(CCBlocks.ACACIA_LOG_SLAB.get(), "Acacia Log Slab");
+        builder.add(CCBlocks.BAMBOO_BLOCK_SLAB.get(), "Bamboo Block Slab");
+        builder.add(CCBlocks.BIRCH_LOG_SLAB.get(), "Birch Log Slab");
+        builder.add(CCBlocks.CHERRY_LOG_SLAB.get(), "Cherry Log Slab");
+        builder.add(CCBlocks.CRIMSON_STEM_SLAB.get(), "Crimson Stem Slab");
+        builder.add(CCBlocks.JUNGLE_LOG_SLAB.get(), "Jungle Log Slab");
+        builder.add(CCBlocks.MANGROVE_LOG_SLAB.get(), "Mangrove Log Slab");
+        builder.add(CCBlocks.SPRUCE_LOG_SLAB.get(), "Spruce Log Slab");
+        builder.add(CCBlocks.WARPED_STEM_SLAB.get(), "Warped Stem Slab");
+
+        builder.add(CCBlocks.STRIPPED_OAK_LOG_SLAB.get(), "Stripped Oak Log Slab");
+        builder.add(CCBlocks.STRIPPED_DARK_OAK_LOG_SLAB.get(), "Stripped Dark Oak Log Slab");
+        builder.add(CCBlocks.STRIPPED_ACACIA_LOG_SLAB.get(), "Stripped Acacia Log Slab");
+        builder.add(CCBlocks.STRIPPED_BAMBOO_BLOCK_SLAB.get(), "Stripped Bamboo Block Slab");
+        builder.add(CCBlocks.STRIPPED_BIRCH_LOG_SLAB.get(), "Stripped Birch Log Slab");
+        builder.add(CCBlocks.STRIPPED_CHERRY_LOG_SLAB.get(), "Stripped Cherry Log Slab");
+        builder.add(CCBlocks.STRIPPED_CRIMSON_STEM_SLAB.get(), "Stripped Crimson Stem Slab");
+        builder.add(CCBlocks.STRIPPED_JUNGLE_LOG_SLAB.get(), "Stripped Jungle Log Slab");
+        builder.add(CCBlocks.STRIPPED_MANGROVE_LOG_SLAB.get(), "Stripped Mangrove Log Slab");
+        builder.add(CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get(), "Stripped Spruce Log Slab");
+        builder.add(CCBlocks.STRIPPED_WARPED_STEM_SLAB.get(), "Stripped Warped Stem Slab");
+
         builder.add("tooltip.carpentry_and_chisels.pattern_0", "No Pattern");
         builder.add("tooltip.carpentry_and_chisels.pattern_1", "Swirl Pattern");
         builder.add("tooltip.carpentry_and_chisels.pattern_2", "Target Pattern");
