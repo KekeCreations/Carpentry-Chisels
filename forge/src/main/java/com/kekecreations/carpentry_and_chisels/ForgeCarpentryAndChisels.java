@@ -58,6 +58,14 @@ public class ForgeCarpentryAndChisels {
             addAfter(event, Blocks.OAK_SLAB, CCBlocks.CARVED_OAK_WOOD.get());
             addAfter(event, Blocks.DARK_OAK_SLAB, CCBlocks.CARVED_DARK_OAK_WOOD.get());
             addAfter(event, Blocks.ACACIA_SLAB, CCBlocks.CARVED_ACACIA_WOOD.get());
+            addAfter(event, Blocks.BAMBOO_SLAB, CCBlocks.CARVED_BAMBOO_WOOD.get());
+            addAfter(event, Blocks.BIRCH_SLAB, CCBlocks.CARVED_BIRCH_WOOD.get());
+            addAfter(event, Blocks.CHERRY_SLAB, CCBlocks.CARVED_CHERRY_WOOD.get());
+            addAfter(event, Blocks.CRIMSON_SLAB, CCBlocks.CARVED_CRIMSON_WOOD.get());
+            addAfter(event, Blocks.JUNGLE_SLAB, CCBlocks.CARVED_JUNGLE_WOOD.get());
+            addAfter(event, Blocks.MANGROVE_SLAB, CCBlocks.CARVED_MANGROVE_WOOD.get());
+            addAfter(event, Blocks.SPRUCE_SLAB, CCBlocks.CARVED_SPRUCE_WOOD.get());
+            addAfter(event, Blocks.WARPED_SLAB, CCBlocks.CARVED_WARPED_WOOD.get());
         }
     }
 }

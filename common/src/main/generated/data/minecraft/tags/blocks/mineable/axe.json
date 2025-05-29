@@ -3,6 +3,14 @@
   "values": [
     "carpentry_and_chisels:carved_dark_oak_wood",
     "carpentry_and_chisels:carved_acacia_wood",
+    "carpentry_and_chisels:carved_bamboo_wood",
+    "carpentry_and_chisels:carved_birch_wood",
+    "carpentry_and_chisels:carved_cherry_wood",
+    "carpentry_and_chisels:carved_crimson_wood",
+    "carpentry_and_chisels:carved_jungle_wood",
+    "carpentry_and_chisels:carved_mangrove_wood",
+    "carpentry_and_chisels:carved_spruce_wood",
+    "carpentry_and_chisels:carved_warped_wood",
     "carpentry_and_chisels:carved_oak_wood"
   ]
 }

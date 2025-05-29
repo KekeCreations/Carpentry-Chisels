@@ -22,6 +22,30 @@ public class CCBlocks {
     public static final Supplier<Block> CARVED_ACACIA_WOOD = registerBlockWithItem("carved_acacia_wood",
             () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
 
+    public static final Supplier<Block> CARVED_BAMBOO_WOOD = registerBlockWithItem("carved_bamboo_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Supplier<Block> CARVED_BIRCH_WOOD = registerBlockWithItem("carved_birch_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Supplier<Block> CARVED_CHERRY_WOOD = registerBlockWithItem("carved_cherry_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Supplier<Block> CARVED_CRIMSON_WOOD = registerBlockWithItem("carved_crimson_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Supplier<Block> CARVED_JUNGLE_WOOD = registerBlockWithItem("carved_jungle_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Supplier<Block> CARVED_MANGROVE_WOOD = registerBlockWithItem("carved_mangrove_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Supplier<Block> CARVED_SPRUCE_WOOD = registerBlockWithItem("carved_spruce_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Supplier<Block> CARVED_WARPED_WOOD = registerBlockWithItem("carved_warped_wood",
+            () -> new CarvedWoodBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+
     private static <T extends Block> Supplier<T> registerBlockWithItem(String name, java.util.function.Supplier<T> blockSupplier) {
         return Services.REGISTRY.registerBlockWithItem(name, blockSupplier);
     }

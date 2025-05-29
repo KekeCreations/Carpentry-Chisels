@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:jungle_slab"
+    }
+  },
+  "pattern": [
+    "KK"
+  ],
+  "result": {
+    "item": "carpentry_and_chisels:carved_jungle_wood"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:spruce_slab"
+    }
+  },
+  "pattern": [
+    "KK"
+  ],
+  "result": {
+    "item": "carpentry_and_chisels:carved_spruce_wood"
+  },
+  "show_notification": true
+}

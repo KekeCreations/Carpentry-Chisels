@@ -1,0 +1,7 @@
+{
+  "parent": "carpentry_and_chisels:block/carved_wood",
+  "textures": {
+    "particle": "carpentry_and_chisels:block/carved_spruce_wood_0",
+    "texture": "carpentry_and_chisels:block/carved_spruce_wood_0"
+  }
+}

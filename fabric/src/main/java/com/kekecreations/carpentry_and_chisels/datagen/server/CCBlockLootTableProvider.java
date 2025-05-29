@@ -14,5 +14,13 @@ public class CCBlockLootTableProvider extends FabricBlockLootTableProvider {
         dropSelf(CCBlocks.CARVED_OAK_WOOD.get());
         dropSelf(CCBlocks.CARVED_DARK_OAK_WOOD.get());
         dropSelf(CCBlocks.CARVED_ACACIA_WOOD.get());
+        dropSelf(CCBlocks.CARVED_BAMBOO_WOOD.get());
+        dropSelf(CCBlocks.CARVED_BIRCH_WOOD.get());
+        dropSelf(CCBlocks.CARVED_CHERRY_WOOD.get());
+        dropSelf(CCBlocks.CARVED_CRIMSON_WOOD.get());
+        dropSelf(CCBlocks.CARVED_JUNGLE_WOOD.get());
+        dropSelf(CCBlocks.CARVED_MANGROVE_WOOD.get());
+        dropSelf(CCBlocks.CARVED_SPRUCE_WOOD.get());
+        dropSelf(CCBlocks.CARVED_WARPED_WOOD.get());
     }
 }

@@ -29,6 +29,14 @@ public class CCModelProvider extends FabricModelProvider {
         carvedWoodBlock(generator, CCBlocks.CARVED_OAK_WOOD.get());
         carvedWoodBlock(generator, CCBlocks.CARVED_DARK_OAK_WOOD.get());
         carvedWoodBlock(generator, CCBlocks.CARVED_ACACIA_WOOD.get());
+        carvedWoodBlock(generator, CCBlocks.CARVED_BAMBOO_WOOD.get());
+        carvedWoodBlock(generator, CCBlocks.CARVED_BIRCH_WOOD.get());
+        carvedWoodBlock(generator, CCBlocks.CARVED_CHERRY_WOOD.get());
+        carvedWoodBlock(generator, CCBlocks.CARVED_CRIMSON_WOOD.get());
+        carvedWoodBlock(generator, CCBlocks.CARVED_JUNGLE_WOOD.get());
+        carvedWoodBlock(generator, CCBlocks.CARVED_MANGROVE_WOOD.get());
+        carvedWoodBlock(generator, CCBlocks.CARVED_SPRUCE_WOOD.get());
+        carvedWoodBlock(generator, CCBlocks.CARVED_WARPED_WOOD.get());
 
 
     }
