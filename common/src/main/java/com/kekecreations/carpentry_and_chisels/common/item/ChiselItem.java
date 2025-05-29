@@ -125,11 +125,11 @@ public class ChiselItem extends Item {
             }
             toolTipComponents.add(Component.literal(""));
             if (InputConstants.isKeyDown(Minecraft.getInstance().getWindow().getWindow(), Minecraft.getInstance().options.keyShift.getDefaultKey().getValue())) {
-                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.control_1").withStyle(ChatFormatting.RED));
-                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.control_2").withStyle(ChatFormatting.RED));
-                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.control_3").withStyle(ChatFormatting.RED));
+                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.control_1").withStyle(ChatFormatting.GRAY));
+                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.control_2").withStyle(ChatFormatting.BLUE));
+                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.control_3").withStyle(ChatFormatting.BLUE));
             } else {
-                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.show").withStyle(ChatFormatting.RED));
+                toolTipComponents.add(Component.translatable("tooltip.carpentry_and_chisels.show").withStyle(ChatFormatting.BLUE));
             }
         }
     }
