@@ -1,0 +1,12 @@
+{
+  "chiseling": {
+    "minecraft:stone_bricks": "minecraft:chiseled_stone_bricks",
+    "minecraft:cobbled_deepslate": "minecraft:chiseled_deepslate",
+    "minecraft:sandstone": "minecraft:chiseled_sandstone",
+    "minecraft:red_sandstone": "minecraft:chiseled_red_sandstone",
+    "minecraft:nether_bricks": "minecraft:chiseled_nether_bricks",
+    "minecraft:polished_blackstone": "minecraft:chiseled_polished_blackstone",
+    "minecraft:quartz_block": "minecraft:chiseled_quartz_block",
+    "minecraft:infested_stone_bricks": "minecraft:infested_chiseled_stone_bricks"
+  }
+}

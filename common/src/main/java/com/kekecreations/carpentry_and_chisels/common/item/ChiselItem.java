@@ -61,6 +61,13 @@ public class ChiselItem extends Item {
         ItemStack itemStack = useOnContext.getItemInHand();
         InteractionHand hand = useOnContext.getHand();
 
+        if (!level.isClientSide() && ChiselUtils.getFinalBlock(level.registryAccess(), blockState) != null) {
+            level.setBlockAndUpdate(blockPos, ChiselUtils.getFinalBlock(level.registryAccess(), blockState).defaultBlockState());
+            itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(hand));
+            level.playSound(null, blockPos, blockState.getSoundType().getPlaceSound(), SoundSource.BLOCKS, 1.0F, 1.0F);
+            return InteractionResult.sidedSuccess(true);
+        }
+
         if (!level.isClientSide() && player != null) {
             if (player.isSecondaryUseActive()) {
                 if (blockState.getBlock() instanceof CarvedWoodBlock) {
