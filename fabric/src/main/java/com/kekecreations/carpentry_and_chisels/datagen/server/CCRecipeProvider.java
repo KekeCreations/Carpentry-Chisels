@@ -24,11 +24,11 @@ public class CCRecipeProvider extends FabricRecipeProvider {
         carvedWoodRecipe(Blocks.BAMBOO_SLAB, CCBlocks.CARVED_BAMBOO_WOOD.get(), consumer);
         carvedWoodRecipe(Blocks.BIRCH_SLAB, CCBlocks.CARVED_BIRCH_WOOD.get(), consumer);
         carvedWoodRecipe(Blocks.CHERRY_SLAB, CCBlocks.CARVED_CHERRY_WOOD.get(), consumer);
-        carvedWoodRecipe(Blocks.CRIMSON_SLAB, CCBlocks.CARVED_CRIMSON_WOOD.get(), consumer);
+        carvedWoodRecipe(Blocks.CRIMSON_SLAB, CCBlocks.CARVED_CRIMSON_HYPHAE.get(), consumer);
         carvedWoodRecipe(Blocks.JUNGLE_SLAB, CCBlocks.CARVED_JUNGLE_WOOD.get(), consumer);
         carvedWoodRecipe(Blocks.MANGROVE_SLAB, CCBlocks.CARVED_MANGROVE_WOOD.get(), consumer);
         carvedWoodRecipe(Blocks.SPRUCE_SLAB, CCBlocks.CARVED_SPRUCE_WOOD.get(), consumer);
-        carvedWoodRecipe(Blocks.WARPED_SLAB, CCBlocks.CARVED_WARPED_WOOD.get(), consumer);
+        carvedWoodRecipe(Blocks.WARPED_SLAB, CCBlocks.CARVED_WARPED_HYPHAE.get(), consumer);
 
 
         slabRecipe(Blocks.OAK_LOG, CCBlocks.OAK_LOG_SLAB.get(), consumer);

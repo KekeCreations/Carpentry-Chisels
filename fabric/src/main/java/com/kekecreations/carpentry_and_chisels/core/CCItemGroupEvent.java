@@ -20,11 +20,11 @@ public class CCItemGroupEvent {
             event.addAfter(Blocks.BAMBOO_MOSAIC_SLAB, CCBlocks.CARVED_BAMBOO_WOOD.get());
             event.addAfter(Blocks.BIRCH_SLAB, CCBlocks.CARVED_BIRCH_WOOD.get());
             event.addAfter(Blocks.CHERRY_SLAB, CCBlocks.CARVED_CHERRY_WOOD.get());
-            event.addAfter(Blocks.CRIMSON_SLAB, CCBlocks.CARVED_CRIMSON_WOOD.get());
+            event.addAfter(Blocks.CRIMSON_SLAB, CCBlocks.CARVED_CRIMSON_HYPHAE.get());
             event.addAfter(Blocks.JUNGLE_SLAB, CCBlocks.CARVED_JUNGLE_WOOD.get());
             event.addAfter(Blocks.MANGROVE_SLAB, CCBlocks.CARVED_MANGROVE_WOOD.get());
             event.addAfter(Blocks.SPRUCE_SLAB, CCBlocks.CARVED_SPRUCE_WOOD.get());
-            event.addAfter(Blocks.WARPED_SLAB, CCBlocks.CARVED_WARPED_WOOD.get());
+            event.addAfter(Blocks.WARPED_SLAB, CCBlocks.CARVED_WARPED_HYPHAE.get());
 
             event.addAfter(Blocks.OAK_WOOD, CCBlocks.OAK_LOG_SLAB.get());
             event.addAfter(Blocks.DARK_OAK_WOOD, CCBlocks.DARK_OAK_LOG_SLAB.get());

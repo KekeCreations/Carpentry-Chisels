@@ -3,14 +3,14 @@
   "category": "building",
   "key": {
     "K": {
-      "item": "minecraft:warped_slab"
+      "item": "minecraft:crimson_slab"
     }
   },
   "pattern": [
     "KK"
   ],
   "result": {
-    "item": "carpentry_and_chisels:carved_warped_wood"
+    "item": "carpentry_and_chisels:carved_crimson_hyphae"
   },
   "show_notification": true
 }

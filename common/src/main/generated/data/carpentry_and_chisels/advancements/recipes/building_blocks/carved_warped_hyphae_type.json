@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "carved_warped_wood": {
+    "carved_warped_hyphae": {
       "conditions": {
         "items": [
           {
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:carved_warped_wood_type"
+        "recipe": "minecraft:carved_warped_hyphae_type"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "carved_warped_wood",
+      "carved_warped_hyphae",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:carved_warped_wood_type"
+      "minecraft:carved_warped_hyphae_type"
     ]
   },
   "sends_telemetry_event": false

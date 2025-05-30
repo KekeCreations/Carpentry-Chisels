@@ -25,11 +25,11 @@ public class CCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(CCBlocks.CARVED_BAMBOO_WOOD.get())
                 .add(CCBlocks.CARVED_BIRCH_WOOD.get())
                 .add(CCBlocks.CARVED_CHERRY_WOOD.get())
-                .add(CCBlocks.CARVED_CRIMSON_WOOD.get())
+                .add(CCBlocks.CARVED_CRIMSON_HYPHAE.get())
                 .add(CCBlocks.CARVED_JUNGLE_WOOD.get())
                 .add(CCBlocks.CARVED_MANGROVE_WOOD.get())
                 .add(CCBlocks.CARVED_SPRUCE_WOOD.get())
-                .add(CCBlocks.CARVED_WARPED_WOOD.get())
+                .add(CCBlocks.CARVED_WARPED_HYPHAE.get())
                 .add(CCBlocks.CARVED_OAK_WOOD.get())
 
                 .add(CCBlocks.DARK_OAK_LOG_SLAB.get())

@@ -19,11 +19,11 @@ public class CCLanguageProvider extends FabricLanguageProvider {
         builder.add(CCBlocks.CARVED_BAMBOO_WOOD.get(), "Carved Bamboo Wood");
         builder.add(CCBlocks.CARVED_BIRCH_WOOD.get(), "Carved Birch Wood");
         builder.add(CCBlocks.CARVED_CHERRY_WOOD.get(), "Carved Cherry Wood");
-        builder.add(CCBlocks.CARVED_CRIMSON_WOOD.get(), "Carved Crimson Wood");
+        builder.add(CCBlocks.CARVED_CRIMSON_HYPHAE.get(), "Carved Crimson Hyphae");
         builder.add(CCBlocks.CARVED_JUNGLE_WOOD.get(), "Carved Jungle Wood");
         builder.add(CCBlocks.CARVED_MANGROVE_WOOD.get(), "Carved Mangrove Wood");
         builder.add(CCBlocks.CARVED_SPRUCE_WOOD.get(), "Carved Spruce Wood");
-        builder.add(CCBlocks.CARVED_WARPED_WOOD.get(), "Carved Warped Wood");
+        builder.add(CCBlocks.CARVED_WARPED_HYPHAE.get(), "Carved Warped Hyphae");
         builder.add(CCItems.CHISEL.get(), "Chisel");
 
         builder.add(CCBlocks.OAK_LOG_SLAB.get(), "Oak Log Slab");
