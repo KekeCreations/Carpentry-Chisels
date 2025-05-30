@@ -1,7 +1,9 @@
 package com.kekecreations.carpentry_and_chisels;
 
+import com.kekecreations.carpentry_and_chisels.common.item.Chiseling;
 import com.kekecreations.carpentry_and_chisels.core.platform.ForgeRegistryHelper;
 import com.kekecreations.carpentry_and_chisels.core.registry.CCBlocks;
+import com.kekecreations.carpentry_and_chisels.core.registry.CCDatapackRegistries;
 import com.kekecreations.carpentry_and_chisels.core.registry.CCItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -13,6 +15,7 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DataPackRegistryEvent;
 
 @Mod(Constants.MOD_ID)
 public class ForgeCarpentryAndChisels {
@@ -26,7 +29,12 @@ public class ForgeCarpentryAndChisels {
 
 
         modEventBus.addListener(this::creativeItemGroups);
+        modEventBus.addListener(this::datapackRegistry);
         
+    }
+
+    public void datapackRegistry(DataPackRegistryEvent.NewRegistry event) {
+        event.dataPackRegistry(CCDatapackRegistries.CHISELING, Chiseling.CODEC);
     }
 
 
