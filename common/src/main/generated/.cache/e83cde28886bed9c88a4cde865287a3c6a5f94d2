@@ -1,4 +1,4 @@
-// 1.20.1	2025-05-30T04:34:49.121267	Carpentry & Chisels/Block Loot Tables
+// 1.20.1	2025-06-02T09:03:30.6074855	Carpentry & Chisels/Block Loot Tables
 00007a5f7263af158e550549e2be74fd5c272c94 data\carpentry_and_chisels\loot_tables\blocks\carved_warped_hyphae.json
 62fcd1aa6fde48c0f542ad5b467611a1f49cfbdc data\carpentry_and_chisels\loot_tables\blocks\oak_log_slab.json
 d5b6d928578046d8c497641884bbfdab2f2faaca data\carpentry_and_chisels\loot_tables\blocks\carved_dark_oak_wood.json
@@ -8,8 +8,8 @@ d5b6d928578046d8c497641884bbfdab2f2faaca data\carpentry_and_chisels\loot_tables\
 5a200825fa36d78a0026ddbcbd4d471a776b5ecd data\carpentry_and_chisels\loot_tables\blocks\cherry_log_slab.json
 99796fa631d9940d97db0b1c9a92c18b8997e350 data\carpentry_and_chisels\loot_tables\blocks\spruce_log_slab.json
 69cd1865640f2d8e69f728ff0847b930920ec401 data\carpentry_and_chisels\loot_tables\blocks\acacia_log_slab.json
-654a7e0a165c76f5c2b57328dd818a4ab18d0025 data\carpentry_and_chisels\loot_tables\blocks\jungle_log_slab.json
 90925a433ae0834035a42fd4e279aa43a59ebd81 data\carpentry_and_chisels\loot_tables\blocks\carved_crimson_hyphae.json
+654a7e0a165c76f5c2b57328dd818a4ab18d0025 data\carpentry_and_chisels\loot_tables\blocks\jungle_log_slab.json
 92ca0b23b35c81dbc8e5b019f4985b816f07f21a data\carpentry_and_chisels\loot_tables\blocks\stripped_spruce_log_slab.json
 6f7f4db92f5786dff8799176169f496b13a1094c data\carpentry_and_chisels\loot_tables\blocks\carved_cherry_wood.json
 c2b91a8e54a76667a58bd08405ad810b3951bdd4 data\carpentry_and_chisels\loot_tables\blocks\stripped_crimson_stem_slab.json

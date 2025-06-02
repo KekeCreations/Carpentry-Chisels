@@ -64,6 +64,8 @@ public class CCModelProvider extends FabricModelProvider {
         slab(generator, CCBlocks.WARPED_STEM_SLAB.get(), Blocks.WARPED_STEM);
         slab(generator, CCBlocks.STRIPPED_WARPED_STEM_SLAB.get(), Blocks.STRIPPED_WARPED_STEM);
 
+        pole(generator, CCBlocks.ACACIA_POLE.get());
+
 
     }
 
@@ -115,5 +117,10 @@ public class CCModelProvider extends FabricModelProvider {
                                 .with(VariantProperties.MODEL, topModel))
                         .select(SlabType.DOUBLE, Variant.variant()
                                 .with(VariantProperties.MODEL, doubleModel))));
+    }
+
+    public static void pole(BlockModelGenerators generator, Block block) {
+        ResourceLocation model = CCModelTemplate.POLE.create(block, CCTextureMapping.poleTextureMappings(block), generator.modelOutput);
+        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(block, Variant.variant().with(VariantProperties.MODEL, model)));
     }
 }

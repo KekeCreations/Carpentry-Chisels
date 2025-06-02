@@ -2,6 +2,7 @@ package com.kekecreations.carpentry_and_chisels.core.registry;
 
 import com.kekecreations.carpentry_and_chisels.common.block.CCSlabBlock;
 import com.kekecreations.carpentry_and_chisels.common.block.CarvedWoodBlock;
+import com.kekecreations.carpentry_and_chisels.common.block.PoleBlock;
 import com.kekecreations.carpentry_and_chisels.core.platform.Services;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -115,6 +116,11 @@ public class CCBlocks {
 
     public static final Supplier<Block> STRIPPED_WARPED_STEM_SLAB = registerBlockWithItem("stripped_warped_stem_slab",
             () -> new CCSlabBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.STEM).ignitedByLava().mapColor(MapColor.WOOD)));
+
+
+
+    public static final Supplier<Block> ACACIA_POLE = registerBlockWithItem("acacia_pole",
+            () -> new PoleBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
 
     private static <T extends Block> Supplier<T> registerBlockWithItem(String name, java.util.function.Supplier<T> blockSupplier) {
         return Services.REGISTRY.registerBlockWithItem(name, blockSupplier);
