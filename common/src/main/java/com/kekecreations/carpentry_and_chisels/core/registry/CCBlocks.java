@@ -5,6 +5,7 @@ import com.kekecreations.carpentry_and_chisels.common.block.CarvedWoodBlock;
 import com.kekecreations.carpentry_and_chisels.common.block.PoleBlock;
 import com.kekecreations.carpentry_and_chisels.core.platform.Services;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -119,8 +120,74 @@ public class CCBlocks {
 
 
 
+
+    public static final Supplier<Block> STRIPPED_ACACIA_POLE = registerBlockWithItem("stripped_acacia_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
     public static final Supplier<Block> ACACIA_POLE = registerBlockWithItem("acacia_pole",
-            () -> new PoleBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+            () -> new PoleBlock(STRIPPED_ACACIA_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> STRIPPED_BAMBOO_POLE = registerBlockWithItem("stripped_bamboo_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.BAMBOO_WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> BAMBOO_POLE = registerBlockWithItem("bamboo_pole",
+            () -> new PoleBlock(STRIPPED_BAMBOO_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.BAMBOO_WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+
+    public static final Supplier<Block> STRIPPED_BIRCH_POLE = registerBlockWithItem("stripped_birch_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> BIRCH_POLE = registerBlockWithItem("birch_pole",
+            () -> new PoleBlock(STRIPPED_BIRCH_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> STRIPPED_CHERRY_POLE = registerBlockWithItem("stripped_cherry_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.CHERRY_WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> CHERRY_POLE = registerBlockWithItem("cherry_pole",
+            () -> new PoleBlock(STRIPPED_CHERRY_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.CHERRY_WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> STRIPPED_CRIMSON_POLE = registerBlockWithItem("stripped_crimson_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.STEM).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> CRIMSON_POLE = registerBlockWithItem("crimson_pole",
+            () -> new PoleBlock(STRIPPED_CRIMSON_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.STEM).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> STRIPPED_DARK_OAK_POLE = registerBlockWithItem("stripped_dark_oak_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> DARK_OAK_POLE = registerBlockWithItem("dark_oak_pole",
+            () -> new PoleBlock(STRIPPED_DARK_OAK_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> STRIPPED_JUNGLE_POLE = registerBlockWithItem("stripped_jungle_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> JUNGLE_POLE = registerBlockWithItem("jungle_pole",
+            () -> new PoleBlock(STRIPPED_JUNGLE_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> STRIPPED_MANGROVE_POLE = registerBlockWithItem("stripped_mangrove_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> MANGROVE_POLE = registerBlockWithItem("mangrove_pole",
+            () -> new PoleBlock(STRIPPED_MANGROVE_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> STRIPPED_OAK_POLE = registerBlockWithItem("stripped_oak_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> OAK_POLE = registerBlockWithItem("oak_pole",
+            () -> new PoleBlock(STRIPPED_OAK_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> STRIPPED_SPRUCE_POLE = registerBlockWithItem("stripped_spruce_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> SPRUCE_POLE = registerBlockWithItem("spruce_pole",
+            () -> new PoleBlock(STRIPPED_SPRUCE_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.WOOD).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> STRIPPED_WARPED_POLE = registerBlockWithItem("stripped_warped_pole",
+            () -> new PoleBlock(null, BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.STEM).ignitedByLava().mapColor(MapColor.WOOD)));
+
+    public static final Supplier<Block> WARPED_POLE = registerBlockWithItem("warped_pole",
+            () -> new PoleBlock(STRIPPED_WARPED_POLE.get(), BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASS).strength(2.0F).sound(SoundType.STEM).ignitedByLava().mapColor(MapColor.WOOD)));
+
 
     private static <T extends Block> Supplier<T> registerBlockWithItem(String name, java.util.function.Supplier<T> blockSupplier) {
         return Services.REGISTRY.registerBlockWithItem(name, blockSupplier);

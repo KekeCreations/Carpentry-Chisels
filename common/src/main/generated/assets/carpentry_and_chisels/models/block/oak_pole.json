@@ -1,0 +1,8 @@
+{
+  "parent": "carpentry_and_chisels:block/pole",
+  "textures": {
+    "particle": "carpentry_and_chisels:block/oak_pole",
+    "side": "carpentry_and_chisels:block/oak_pole",
+    "top": "carpentry_and_chisels:block/oak_pole_top"
+  }
+}

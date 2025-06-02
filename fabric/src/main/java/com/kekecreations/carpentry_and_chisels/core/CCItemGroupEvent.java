@@ -50,6 +50,33 @@ public class CCItemGroupEvent {
             event.addAfter(Blocks.STRIPPED_MANGROVE_WOOD, CCBlocks.STRIPPED_MANGROVE_LOG_SLAB.get());
             event.addAfter(Blocks.STRIPPED_SPRUCE_WOOD, CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get());
             event.addAfter(Blocks.STRIPPED_WARPED_HYPHAE, CCBlocks.STRIPPED_WARPED_STEM_SLAB.get());
+
+
+
+            event.addAfter(CCBlocks.CARVED_OAK_WOOD.get(), CCBlocks.OAK_POLE.get());
+            event.addAfter(CCBlocks.CARVED_DARK_OAK_WOOD.get(), CCBlocks.DARK_OAK_POLE.get());
+            event.addAfter(CCBlocks.CARVED_ACACIA_WOOD.get(), CCBlocks.ACACIA_POLE.get());
+            event.addAfter(CCBlocks.CARVED_BAMBOO_WOOD.get(), CCBlocks.BAMBOO_POLE.get());
+            event.addAfter(CCBlocks.CARVED_BIRCH_WOOD.get(), CCBlocks.BIRCH_POLE.get());
+            event.addAfter(CCBlocks.CARVED_CHERRY_WOOD.get(), CCBlocks.CHERRY_POLE.get());
+            event.addAfter(CCBlocks.CARVED_CRIMSON_HYPHAE.get(), CCBlocks.CRIMSON_POLE.get());
+            event.addAfter(CCBlocks.CARVED_JUNGLE_WOOD.get(), CCBlocks.JUNGLE_POLE.get());
+            event.addAfter(CCBlocks.CARVED_MANGROVE_WOOD.get(), CCBlocks.MANGROVE_POLE.get());
+            event.addAfter(CCBlocks.CARVED_SPRUCE_WOOD.get(), CCBlocks.SPRUCE_POLE.get());
+            event.addAfter(CCBlocks.CARVED_WARPED_HYPHAE.get(), CCBlocks.WARPED_POLE.get());
+
+
+            event.addAfter(CCBlocks.OAK_POLE.get(), CCBlocks.STRIPPED_OAK_POLE.get());
+            event.addAfter(CCBlocks.DARK_OAK_POLE.get(), CCBlocks.STRIPPED_DARK_OAK_POLE.get());
+            event.addAfter(CCBlocks.ACACIA_POLE.get(), CCBlocks.STRIPPED_ACACIA_POLE.get());
+            event.addAfter(CCBlocks.BAMBOO_POLE.get(), CCBlocks.STRIPPED_BAMBOO_POLE.get());
+            event.addAfter(CCBlocks.BIRCH_POLE.get(), CCBlocks.STRIPPED_BIRCH_POLE.get());
+            event.addAfter(CCBlocks.CHERRY_POLE.get(), CCBlocks.STRIPPED_CHERRY_POLE.get());
+            event.addAfter(CCBlocks.CRIMSON_POLE.get(), CCBlocks.STRIPPED_CRIMSON_POLE.get());
+            event.addAfter(CCBlocks.JUNGLE_POLE.get(), CCBlocks.STRIPPED_JUNGLE_POLE.get());
+            event.addAfter(CCBlocks.MANGROVE_POLE.get(), CCBlocks.STRIPPED_MANGROVE_POLE.get());
+            event.addAfter(CCBlocks.SPRUCE_POLE.get(), CCBlocks.STRIPPED_SPRUCE_POLE.get());
+            event.addAfter(CCBlocks.WARPED_POLE.get(), CCBlocks.STRIPPED_WARPED_POLE.get());
         });
     }
 }

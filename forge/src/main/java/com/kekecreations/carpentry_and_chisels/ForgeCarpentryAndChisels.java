@@ -101,6 +101,32 @@ public class ForgeCarpentryAndChisels {
             addAfter(event, Blocks.STRIPPED_MANGROVE_WOOD, CCBlocks.STRIPPED_MANGROVE_LOG_SLAB.get());
             addAfter(event, Blocks.STRIPPED_SPRUCE_WOOD, CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get());
             addAfter(event, Blocks.STRIPPED_WARPED_HYPHAE, CCBlocks.STRIPPED_WARPED_STEM_SLAB.get());
+
+
+            addAfter(event, CCBlocks.CARVED_OAK_WOOD.get(), CCBlocks.OAK_POLE.get());
+            addAfter(event, CCBlocks.CARVED_DARK_OAK_WOOD.get(), CCBlocks.DARK_OAK_POLE.get());
+            addAfter(event, CCBlocks.CARVED_ACACIA_WOOD.get(), CCBlocks.ACACIA_POLE.get());
+            addAfter(event, CCBlocks.CARVED_BAMBOO_WOOD.get(), CCBlocks.BAMBOO_POLE.get());
+            addAfter(event, CCBlocks.CARVED_BIRCH_WOOD.get(), CCBlocks.BIRCH_POLE.get());
+            addAfter(event, CCBlocks.CARVED_CHERRY_WOOD.get(), CCBlocks.CHERRY_POLE.get());
+            addAfter(event, CCBlocks.CARVED_CRIMSON_HYPHAE.get(), CCBlocks.CRIMSON_POLE.get());
+            addAfter(event, CCBlocks.CARVED_JUNGLE_WOOD.get(), CCBlocks.JUNGLE_POLE.get());
+            addAfter(event, CCBlocks.CARVED_MANGROVE_WOOD.get(), CCBlocks.MANGROVE_POLE.get());
+            addAfter(event, CCBlocks.CARVED_SPRUCE_WOOD.get(), CCBlocks.SPRUCE_POLE.get());
+            addAfter(event, CCBlocks.CARVED_WARPED_HYPHAE.get(), CCBlocks.WARPED_POLE.get());
+
+
+            addAfter(event, CCBlocks.OAK_POLE.get(), CCBlocks.STRIPPED_OAK_POLE.get());
+            addAfter(event, CCBlocks.DARK_OAK_POLE.get(), CCBlocks.STRIPPED_DARK_OAK_POLE.get());
+            addAfter(event, CCBlocks.ACACIA_POLE.get(), CCBlocks.STRIPPED_ACACIA_POLE.get());
+            addAfter(event, CCBlocks.BAMBOO_POLE.get(), CCBlocks.STRIPPED_BAMBOO_POLE.get());
+            addAfter(event, CCBlocks.BIRCH_POLE.get(), CCBlocks.STRIPPED_BIRCH_POLE.get());
+            addAfter(event, CCBlocks.CHERRY_POLE.get(), CCBlocks.STRIPPED_CHERRY_POLE.get());
+            addAfter(event, CCBlocks.CRIMSON_POLE.get(), CCBlocks.STRIPPED_CRIMSON_POLE.get());
+            addAfter(event, CCBlocks.JUNGLE_POLE.get(), CCBlocks.STRIPPED_JUNGLE_POLE.get());
+            addAfter(event, CCBlocks.MANGROVE_POLE.get(), CCBlocks.STRIPPED_MANGROVE_POLE.get());
+            addAfter(event, CCBlocks.SPRUCE_POLE.get(), CCBlocks.STRIPPED_SPRUCE_POLE.get());
+            addAfter(event, CCBlocks.WARPED_POLE.get(), CCBlocks.STRIPPED_WARPED_POLE.get());
         }
     }
 }

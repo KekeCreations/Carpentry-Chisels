@@ -64,7 +64,28 @@ public class CCModelProvider extends FabricModelProvider {
         slab(generator, CCBlocks.WARPED_STEM_SLAB.get(), Blocks.WARPED_STEM);
         slab(generator, CCBlocks.STRIPPED_WARPED_STEM_SLAB.get(), Blocks.STRIPPED_WARPED_STEM);
 
+        pole(generator, CCBlocks.OAK_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_OAK_POLE.get());
+        pole(generator, CCBlocks.DARK_OAK_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_DARK_OAK_POLE.get());
         pole(generator, CCBlocks.ACACIA_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_ACACIA_POLE.get());
+        pole(generator, CCBlocks.BAMBOO_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_BAMBOO_POLE.get());
+        pole(generator, CCBlocks.BIRCH_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_BIRCH_POLE.get());
+        pole(generator, CCBlocks.CHERRY_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_CHERRY_POLE.get());
+        pole(generator, CCBlocks.CRIMSON_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_CRIMSON_POLE.get());
+        pole(generator, CCBlocks.JUNGLE_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_JUNGLE_POLE.get());
+        pole(generator, CCBlocks.MANGROVE_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_MANGROVE_POLE.get());
+        pole(generator, CCBlocks.SPRUCE_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_SPRUCE_POLE.get());
+        pole(generator, CCBlocks.WARPED_POLE.get());
+        pole(generator, CCBlocks.STRIPPED_WARPED_POLE.get());
 
 
     }

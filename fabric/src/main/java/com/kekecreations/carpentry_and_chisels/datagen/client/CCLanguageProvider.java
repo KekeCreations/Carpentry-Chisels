@@ -50,6 +50,31 @@ public class CCLanguageProvider extends FabricLanguageProvider {
         builder.add(CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get(), "Stripped Spruce Log Slab");
         builder.add(CCBlocks.STRIPPED_WARPED_STEM_SLAB.get(), "Stripped Warped Stem Slab");
 
+
+        builder.add(CCBlocks.OAK_POLE.get(), "Oak Pole");
+        builder.add(CCBlocks.DARK_OAK_POLE.get(), "Dark Oak Pole");
+        builder.add(CCBlocks.ACACIA_POLE.get(), "Acacia Pole");
+        builder.add(CCBlocks.BAMBOO_POLE.get(), "Bamboo Pole");
+        builder.add(CCBlocks.BIRCH_POLE.get(), "Birch Pole");
+        builder.add(CCBlocks.CHERRY_POLE.get(), "Cherry Pole");
+        builder.add(CCBlocks.CRIMSON_POLE.get(), "Crimson Pole");
+        builder.add(CCBlocks.JUNGLE_POLE.get(), "Jungle Pole");
+        builder.add(CCBlocks.MANGROVE_POLE.get(), "Mangrove Pole");
+        builder.add(CCBlocks.SPRUCE_POLE.get(), "Spruce Pole");
+        builder.add(CCBlocks.WARPED_POLE.get(), "Warped Pole");
+
+        builder.add(CCBlocks.STRIPPED_OAK_POLE.get(), "Stripped Oak Pole");
+        builder.add(CCBlocks.STRIPPED_DARK_OAK_POLE.get(), "Stripped Dark Oak Pole");
+        builder.add(CCBlocks.STRIPPED_ACACIA_POLE.get(), "Stripped Acacia Pole");
+        builder.add(CCBlocks.STRIPPED_BAMBOO_POLE.get(), "Stripped Bamboo Pole");
+        builder.add(CCBlocks.STRIPPED_BIRCH_POLE.get(), "Stripped Birch Pole");
+        builder.add(CCBlocks.STRIPPED_CHERRY_POLE.get(), "Stripped Cherry Pole");
+        builder.add(CCBlocks.STRIPPED_CRIMSON_POLE.get(), "Stripped Crimson Pole");
+        builder.add(CCBlocks.STRIPPED_JUNGLE_POLE.get(), "Stripped Jungle Pole");
+        builder.add(CCBlocks.STRIPPED_MANGROVE_POLE.get(), "Stripped Mangrove Pole");
+        builder.add(CCBlocks.STRIPPED_SPRUCE_POLE.get(), "Stripped Spruce Pole");
+        builder.add(CCBlocks.STRIPPED_WARPED_POLE.get(), "Stripped Warped Pole");
+
         builder.add("tooltip.carpentry_and_chisels.pattern_0", "No Pattern");
         builder.add("tooltip.carpentry_and_chisels.pattern_1", "Swirl Pattern");
         builder.add("tooltip.carpentry_and_chisels.pattern_2", "Target Pattern");
