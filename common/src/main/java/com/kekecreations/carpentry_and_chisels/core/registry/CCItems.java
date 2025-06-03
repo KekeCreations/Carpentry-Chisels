@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 
 public class CCItems {
 
-    public static final Supplier<Item> CHISEL = registerItem("chisel", () -> new ChiselItem(new Item.Properties().stacksTo(1).durability(130)));
+    public static final Supplier<Item> CHISEL = registerItem("chisel", () -> new ChiselItem(1, new Item.Properties().stacksTo(1).durability(250)));
 
     private static <T extends Item> Supplier<T> registerItem(String name, java.util.function.Supplier<T> itemSupplier) {
         return Services.REGISTRY.registerItem(name, itemSupplier);

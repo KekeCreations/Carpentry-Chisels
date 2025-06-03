@@ -1,7 +1,7 @@
 {
     "required": true,
     "minVersion": "0.8",
-    "package": "com.kekecreations.carpentry_and_chisels.mixin",
+    "package": "com.kekecreations.carpentry_and_chisels.core.mixin",
     "refmap": "${mod_id}.refmap.json",
     "compatibilityLevel": "JAVA_17",
     "mixins": [

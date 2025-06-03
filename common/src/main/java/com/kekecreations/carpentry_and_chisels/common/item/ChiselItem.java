@@ -1,5 +1,7 @@
 package com.kekecreations.carpentry_and_chisels.common.item;
 
+import com.google.common.collect.ImmutableMultimap;
+import com.google.common.collect.Multimap;
 import com.kekecreations.carpentry_and_chisels.common.block.CarvedWoodBlock;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.ChatFormatting;
@@ -9,19 +11,21 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.Vec3;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -30,8 +34,28 @@ public class ChiselItem extends Item {
 
     public static final String TAG_CHISEL_PATTERN = "ChiselPattern";
 
-    public ChiselItem(Properties properties) {
+    private final float attackDamage;
+    private final Multimap<Attribute, AttributeModifier> defaultModifiers;
+
+    public ChiselItem(float attackDamage, Properties properties) {
         super(properties);
+        this.attackDamage = attackDamage;
+        ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
+        builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", this.attackDamage, AttributeModifier.Operation.ADDITION));
+        this.defaultModifiers = builder.build();
+    }
+
+    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot equipmentSlot) {
+        return equipmentSlot == EquipmentSlot.MAINHAND ? this.defaultModifiers : super.getDefaultAttributeModifiers(equipmentSlot);
+    }
+
+    public float getDamage() {
+        return this.attackDamage;
+    }
+
+    public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+        stack.hurtAndBreak(1, attacker, (p_43296_) -> p_43296_.broadcastBreakEvent(EquipmentSlot.MAINHAND));
+        return true;
     }
 
     public int getPattern(ItemStack itemStack) {
@@ -52,9 +76,6 @@ public class ChiselItem extends Item {
         BlockPos blockPos = useOnContext.getClickedPos();
         Level level = useOnContext.getLevel();
         BlockState blockState = level.getBlockState(blockPos);
-        Block block = blockState.getBlock();
-        RandomSource random = level.getRandom();
-        Vec3 clickLocation = useOnContext.getClickLocation();
         ItemStack itemStack = useOnContext.getItemInHand();
         InteractionHand hand = useOnContext.getHand();
 
