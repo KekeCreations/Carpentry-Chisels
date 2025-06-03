@@ -1,6 +1,5 @@
 package com.kekecreations.carpentry_and_chisels.common.block;
 
-import com.kekecreations.carpentry_and_chisels.core.registry.CCBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -15,10 +14,16 @@ import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
+import javax.annotation.Nullable;
+
 public class CCSlabBlock extends SlabBlock {
 
-    public CCSlabBlock(Properties properties) {
+    @Nullable
+    Block strippedVariant;
+
+    public CCSlabBlock(@Nullable Block strippedVariant, Properties properties) {
         super(properties);
+        this.strippedVariant = strippedVariant;
     }
 
     @Override
@@ -26,48 +31,8 @@ public class CCSlabBlock extends SlabBlock {
         ItemStack itemStack = player.getItemInHand(hand);
         if (!level.isClientSide()) {
             if (itemStack.getItem() instanceof AxeItem) {
-                if (state.is(CCBlocks.ACACIA_LOG_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_ACACIA_LOG_SLAB.get());
-                    return InteractionResult.SUCCESS;
-                }
-                else if (state.is(CCBlocks.BAMBOO_BLOCK_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_BAMBOO_BLOCK_SLAB.get());
-                    return InteractionResult.SUCCESS;
-                }
-                else if (state.is(CCBlocks.BIRCH_LOG_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_BIRCH_LOG_SLAB.get());
-                    return InteractionResult.SUCCESS;
-                }
-                else if (state.is(CCBlocks.CHERRY_LOG_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_CHERRY_LOG_SLAB.get());
-                    return InteractionResult.SUCCESS;
-                }
-                else if (state.is(CCBlocks.CRIMSON_STEM_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_CRIMSON_STEM_SLAB.get());
-                    return InteractionResult.SUCCESS;
-                }
-                else if (state.is(CCBlocks.DARK_OAK_LOG_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_DARK_OAK_LOG_SLAB.get());
-                    return InteractionResult.SUCCESS;
-                }
-                else if (state.is(CCBlocks.JUNGLE_LOG_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_JUNGLE_LOG_SLAB.get());
-                    return InteractionResult.SUCCESS;
-                }
-                else if (state.is(CCBlocks.MANGROVE_LOG_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_MANGROVE_LOG_SLAB.get());
-                    return InteractionResult.SUCCESS;
-                }
-                else if (state.is(CCBlocks.OAK_LOG_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_OAK_LOG_SLAB.get());
-                    return InteractionResult.SUCCESS;
-                }
-                else if (state.is(CCBlocks.SPRUCE_LOG_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get());
-                    return InteractionResult.SUCCESS;
-                }
-                else if (state.is(CCBlocks.WARPED_STEM_SLAB.get())) {
-                    stripAxe(level, itemStack, player, hand, pos, state, CCBlocks.STRIPPED_WARPED_STEM_SLAB.get());
+                if (strippedVariant != null) {
+                    stripAxe(level, itemStack, player, hand, pos, state, strippedVariant);
                     return InteractionResult.SUCCESS;
                 }
             }
