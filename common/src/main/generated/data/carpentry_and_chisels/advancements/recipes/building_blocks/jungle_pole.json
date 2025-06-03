@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:jungle_pole"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "jungle_pole": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:jungle_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "jungle_pole",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:jungle_pole"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:cherry_log"
+    }
+  },
+  "pattern": [
+    "K",
+    "K"
+  ],
+  "result": {
+    "count": 4,
+    "item": "carpentry_and_chisels:cherry_pole"
+  },
+  "show_notification": true
+}

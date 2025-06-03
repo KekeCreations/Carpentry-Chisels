@@ -48,6 +48,31 @@ public class CCBlockLootTableProvider extends FabricBlockLootTableProvider {
         slabDrop(CCBlocks.STRIPPED_MANGROVE_LOG_SLAB.get());
         slabDrop(CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get());
         slabDrop(CCBlocks.STRIPPED_WARPED_STEM_SLAB.get());
+
+        dropSelf(CCBlocks.OAK_POLE.get());
+        dropSelf(CCBlocks.DARK_OAK_POLE.get());
+        dropSelf(CCBlocks.ACACIA_POLE.get());
+        dropSelf(CCBlocks.BAMBOO_POLE.get());
+        dropSelf(CCBlocks.BIRCH_POLE.get());
+        dropSelf(CCBlocks.CHERRY_POLE.get());
+        dropSelf(CCBlocks.CRIMSON_POLE.get());
+        dropSelf(CCBlocks.JUNGLE_POLE.get());
+        dropSelf(CCBlocks.MANGROVE_POLE.get());
+        dropSelf(CCBlocks.SPRUCE_POLE.get());
+        dropSelf(CCBlocks.WARPED_POLE.get());
+
+        dropSelf(CCBlocks.STRIPPED_OAK_POLE.get());
+        dropSelf(CCBlocks.STRIPPED_DARK_OAK_POLE.get());
+        dropSelf(CCBlocks.STRIPPED_ACACIA_POLE.get());
+        dropSelf(CCBlocks.STRIPPED_BAMBOO_POLE.get());
+        dropSelf(CCBlocks.STRIPPED_BIRCH_POLE.get());
+        dropSelf(CCBlocks.STRIPPED_CHERRY_POLE.get());
+        dropSelf(CCBlocks.STRIPPED_CRIMSON_POLE.get());
+        dropSelf(CCBlocks.STRIPPED_JUNGLE_POLE.get());
+        dropSelf(CCBlocks.STRIPPED_MANGROVE_POLE.get());
+        dropSelf(CCBlocks.STRIPPED_SPRUCE_POLE.get());
+        dropSelf(CCBlocks.STRIPPED_WARPED_POLE.get());
+
     }
     public void slabDrop(Block block) {
         add(block, createSlabItemTable(block));

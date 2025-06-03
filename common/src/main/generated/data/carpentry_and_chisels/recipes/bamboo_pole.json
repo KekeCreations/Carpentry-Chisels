@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:bamboo_block"
+    }
+  },
+  "pattern": [
+    "K",
+    "K"
+  ],
+  "result": {
+    "count": 4,
+    "item": "carpentry_and_chisels:bamboo_pole"
+  },
+  "show_notification": true
+}

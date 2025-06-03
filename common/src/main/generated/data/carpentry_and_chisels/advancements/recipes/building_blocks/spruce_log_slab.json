@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:spruce_log_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "spruce_log_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:spruce_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "spruce_log_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:spruce_log_slab"
+    ]
+  },
+  "sends_telemetry_event": false
+}

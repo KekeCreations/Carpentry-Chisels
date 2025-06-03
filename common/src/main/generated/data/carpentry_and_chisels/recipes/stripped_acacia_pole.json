@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:stripped_acacia_log"
+    }
+  },
+  "pattern": [
+    "K",
+    "K"
+  ],
+  "result": {
+    "count": 4,
+    "item": "carpentry_and_chisels:stripped_acacia_pole"
+  },
+  "show_notification": true
+}

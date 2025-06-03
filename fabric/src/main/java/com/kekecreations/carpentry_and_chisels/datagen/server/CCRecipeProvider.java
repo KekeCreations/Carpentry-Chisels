@@ -55,6 +55,30 @@ public class CCRecipeProvider extends FabricRecipeProvider {
         slabRecipe(Blocks.STRIPPED_SPRUCE_LOG, CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get(), consumer);
         slabRecipe(Blocks.STRIPPED_WARPED_STEM, CCBlocks.STRIPPED_WARPED_STEM_SLAB.get(), consumer);
 
+        poleRecipe(Blocks.OAK_LOG, CCBlocks.OAK_POLE.get(), consumer);
+        poleRecipe(Blocks.DARK_OAK_LOG, CCBlocks.DARK_OAK_POLE.get(), consumer);
+        poleRecipe(Blocks.ACACIA_LOG, CCBlocks.ACACIA_POLE.get(), consumer);
+        poleRecipe(Blocks.BAMBOO_BLOCK, CCBlocks.BAMBOO_POLE.get(), consumer);
+        poleRecipe(Blocks.BIRCH_LOG, CCBlocks.BIRCH_POLE.get(), consumer);
+        poleRecipe(Blocks.CHERRY_LOG, CCBlocks.CHERRY_POLE.get(), consumer);
+        poleRecipe(Blocks.CRIMSON_STEM, CCBlocks.CRIMSON_POLE.get(), consumer);
+        poleRecipe(Blocks.JUNGLE_LOG, CCBlocks.JUNGLE_POLE.get(), consumer);
+        poleRecipe(Blocks.MANGROVE_LOG, CCBlocks.MANGROVE_POLE.get(), consumer);
+        poleRecipe(Blocks.SPRUCE_LOG, CCBlocks.SPRUCE_POLE.get(), consumer);
+        poleRecipe(Blocks.WARPED_STEM, CCBlocks.WARPED_POLE.get(), consumer);
+
+        poleRecipe(Blocks.STRIPPED_OAK_LOG, CCBlocks.STRIPPED_OAK_POLE.get(), consumer);
+        poleRecipe(Blocks.STRIPPED_DARK_OAK_LOG, CCBlocks.STRIPPED_DARK_OAK_POLE.get(), consumer);
+        poleRecipe(Blocks.STRIPPED_ACACIA_LOG, CCBlocks.STRIPPED_ACACIA_POLE.get(), consumer);
+        poleRecipe(Blocks.STRIPPED_BAMBOO_BLOCK, CCBlocks.STRIPPED_BAMBOO_POLE.get(), consumer);
+        poleRecipe(Blocks.STRIPPED_BIRCH_LOG, CCBlocks.STRIPPED_BIRCH_POLE.get(), consumer);
+        poleRecipe(Blocks.STRIPPED_CHERRY_LOG, CCBlocks.STRIPPED_CHERRY_POLE.get(), consumer);
+        poleRecipe(Blocks.STRIPPED_CRIMSON_STEM, CCBlocks.STRIPPED_CRIMSON_POLE.get(), consumer);
+        poleRecipe(Blocks.STRIPPED_JUNGLE_LOG, CCBlocks.STRIPPED_JUNGLE_POLE.get(), consumer);
+        poleRecipe(Blocks.STRIPPED_MANGROVE_LOG, CCBlocks.STRIPPED_MANGROVE_POLE.get(), consumer);
+        poleRecipe(Blocks.STRIPPED_SPRUCE_LOG, CCBlocks.STRIPPED_SPRUCE_POLE.get(), consumer);
+        poleRecipe(Blocks.STRIPPED_WARPED_STEM, CCBlocks.STRIPPED_WARPED_POLE.get(), consumer);
+
     }
 
     protected static void carvedWoodRecipe(Block craftingBlock, Block resultBlock, Consumer<FinishedRecipe> output) {
@@ -62,7 +86,7 @@ public class CCRecipeProvider extends FabricRecipeProvider {
                 .pattern("KK")
                 .define('K', craftingBlock)
                 .unlockedBy(getItemName(resultBlock), has(craftingBlock))
-                .save(output, getItemName(resultBlock) + "_type");
+                .save(output, getItemName(resultBlock));
     }
 
     protected static void slabRecipe(Block craftingBlock, Block resultBlock, Consumer<FinishedRecipe> output) {
@@ -70,6 +94,15 @@ public class CCRecipeProvider extends FabricRecipeProvider {
                 .pattern("KKK")
                 .define('K', craftingBlock)
                 .unlockedBy(getItemName(resultBlock), has(craftingBlock))
-                .save(output, getItemName(resultBlock) + "_type");
+                .save(output, getItemName(resultBlock));
+    }
+
+    protected static void poleRecipe(Block craftingBlock, Block resultBlock, Consumer<FinishedRecipe> output) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,4)
+                .pattern("K")
+                .pattern("K")
+                .define('K', craftingBlock)
+                .unlockedBy(getItemName(resultBlock), has(craftingBlock))
+                .save(output, getItemName(resultBlock));
     }
 }

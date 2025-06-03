@@ -55,6 +55,30 @@ public class CCBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(CCBlocks.STRIPPED_SPRUCE_LOG_SLAB.get())
                 .add(CCBlocks.STRIPPED_WARPED_STEM_SLAB.get())
                 .add(CCBlocks.STRIPPED_OAK_LOG_SLAB.get())
+
+                .add(CCBlocks.DARK_OAK_POLE.get())
+                .add(CCBlocks.ACACIA_POLE.get())
+                .add(CCBlocks.BAMBOO_POLE.get())
+                .add(CCBlocks.BIRCH_POLE.get())
+                .add(CCBlocks.CHERRY_POLE.get())
+                .add(CCBlocks.CRIMSON_POLE.get())
+                .add(CCBlocks.JUNGLE_POLE.get())
+                .add(CCBlocks.MANGROVE_POLE.get())
+                .add(CCBlocks.SPRUCE_POLE.get())
+                .add(CCBlocks.WARPED_POLE.get())
+                .add(CCBlocks.OAK_POLE.get())
+
+                .add(CCBlocks.STRIPPED_DARK_OAK_POLE.get())
+                .add(CCBlocks.STRIPPED_ACACIA_POLE.get())
+                .add(CCBlocks.STRIPPED_BAMBOO_POLE.get())
+                .add(CCBlocks.STRIPPED_BIRCH_POLE.get())
+                .add(CCBlocks.STRIPPED_CHERRY_POLE.get())
+                .add(CCBlocks.STRIPPED_CRIMSON_POLE.get())
+                .add(CCBlocks.STRIPPED_JUNGLE_POLE.get())
+                .add(CCBlocks.STRIPPED_MANGROVE_POLE.get())
+                .add(CCBlocks.STRIPPED_SPRUCE_POLE.get())
+                .add(CCBlocks.STRIPPED_WARPED_POLE.get())
+                .add(CCBlocks.STRIPPED_OAK_POLE.get())
         ;
     }
 }

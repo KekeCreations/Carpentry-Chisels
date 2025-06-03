@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:mangrove_pole"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "mangrove_pole": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:mangrove_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "mangrove_pole",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:mangrove_pole"
+    ]
+  },
+  "sends_telemetry_event": false
+}
