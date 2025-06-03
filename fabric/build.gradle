@@ -12,6 +12,10 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     modImplementation "curse.maven:modmenu-308702:5162837"
+    modImplementation "curse.maven:every-compat-628539:6566532"
+    modImplementation "curse.maven:selene-499980:6507199"
+    modImplementation "curse.maven:artsandcrafts-1034791:5992025"
+    include implementation("blue.endless:jankson:1.2.3")
     implementation project(":common")
 }
 
@@ -53,6 +57,7 @@ tasks.withType(Javadoc).configureEach {
     source(project(":common").sourceSets.main.allJava)
 }
 tasks.named("sourcesJar", Jar) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     from(project(":common").sourceSets.main.allSource)
 }
 

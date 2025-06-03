@@ -43,26 +43,19 @@ legacyForge {
     }
 }
 
-sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-}
 
-tasks.withType(JavaCompile).configureEach {
-    source(project(":common").sourceSets.main.allSource)
-}
-tasks.withType(Javadoc).configureEach {
-    source(project(":common").sourceSets.main.allJava)
-}
-tasks.named("sourcesJar", Jar) {
-    from(project(":common").sourceSets.main.allSource)
-}
+    implementation 'org.jetbrains:annotations:22.0.0'
 
-processResources {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    from project(":common").sourceSets.main.resources
+    implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
+    implementation("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")
+
+    modApi "curse.maven:every-compat-628539:6566531"
+    modApi "curse.maven:selene-499980:6507197"
+    //implementation "curse.maven:artsandcrafts-1034791:5992027"
 }
 
 jar {
@@ -71,3 +64,5 @@ jar {
             "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
     ])
 }
+
+sourceSets.main.resources { srcDir project(":common").file('src/main/generated/').getAbsolutePath() }

@@ -87,5 +87,11 @@ public class CCLanguageProvider extends FabricLanguageProvider {
         builder.add("tooltip.carpentry_and_chisels.control_1", "While sneaking:");
         builder.add("tooltip.carpentry_and_chisels.control_2", " Interact with Carved Wood to save pattern");
         builder.add("tooltip.carpentry_and_chisels.control_3", " Interact with Air to clear pattern");
+
+        builder.add("block_type.carpentry_and_chisels.carved_wood", "Carved %s Wood");
+        builder.add("block_type.carpentry_and_chisels.log_slab", "%s Log Slab");
+        builder.add("block_type.carpentry_and_chisels.stripped_log_slab", "Stripped %s Log Slab");
+        builder.add("block_type.carpentry_and_chisels.pole", "%s Pole");
+        builder.add("block_type.carpentry_and_chisels.stripped_pole", "Stripped %s Pole");
     }
 }
