@@ -8,8 +8,8 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
+        "homepage": "https://kekecreations.boomla.net/mods/minecraft-java-edition/carpentry-and-chisels",
+        "sources": "https://github.com/KekeCreations/Carpentry-Chisels"
     },
     "license": "${license}",
     "icon": "${mod_id}.png",
