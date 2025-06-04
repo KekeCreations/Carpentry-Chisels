@@ -42,6 +42,7 @@ public class ChiselItem extends Item {
         this.attackDamage = attackDamage;
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", this.attackDamage, AttributeModifier.Operation.ADDITION));
+        builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", -1, AttributeModifier.Operation.ADDITION));
         this.defaultModifiers = builder.build();
     }
 
@@ -91,7 +92,7 @@ public class ChiselItem extends Item {
                 if (blockState.getBlock() instanceof CarvedWoodBlock) {
                     if (getPattern(itemStack) != blockState.getValue(CarvedWoodBlock.PATTERN)) {
                         setPattern(itemStack, blockState.getValue(CarvedWoodBlock.PATTERN));
-                        level.playSound(null, blockPos, SoundEvents.ANVIL_USE, SoundSource.BLOCKS, 0.8F, 0.8F);
+                        level.playSound(null, blockPos, SoundEvents.VILLAGER_WORK_FLETCHER, SoundSource.BLOCKS, 1.0F, 0.5F);
                     }
                 }
             } else {
@@ -127,7 +128,7 @@ public class ChiselItem extends Item {
             if (player.isShiftKeyDown()) {
                 if (getPattern(itemStack) != 0) {
                     setPattern(itemStack, 0);
-                    level.playSound(null, player.getOnPos(), SoundEvents.ANVIL_USE, SoundSource.BLOCKS, 0.8F, 0.8F);
+                    level.playSound(null, player.getOnPos(), SoundEvents.VILLAGER_WORK_FLETCHER, SoundSource.BLOCKS, 1.0F, 0.5F);
                 }
             }
         }

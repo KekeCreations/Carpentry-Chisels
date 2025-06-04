@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "K": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " K",
+    "I "
+  ],
+  "result": {
+    "item": "carpentry_and_chisels:chisel"
+  },
+  "show_notification": true
+}

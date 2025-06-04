@@ -1,11 +1,13 @@
 package com.kekecreations.carpentry_and_chisels.datagen.server;
 
 import com.kekecreations.carpentry_and_chisels.core.registry.CCBlocks;
+import com.kekecreations.carpentry_and_chisels.core.registry.CCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
@@ -79,6 +81,14 @@ public class CCRecipeProvider extends FabricRecipeProvider {
         poleRecipe(Blocks.STRIPPED_SPRUCE_LOG, CCBlocks.STRIPPED_SPRUCE_POLE.get(), consumer);
         poleRecipe(Blocks.STRIPPED_WARPED_STEM, CCBlocks.STRIPPED_WARPED_POLE.get(), consumer);
 
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, CCItems.CHISEL.get() ,1)
+                .pattern(" K")
+                .pattern("I ")
+                .define('K', Items.IRON_INGOT)
+                .define('I', Items.STICK)
+                .unlockedBy(getItemName(CCItems.CHISEL.get()), has(Items.IRON_INGOT))
+                .save(consumer, getItemName(CCItems.CHISEL.get()));
     }
 
     protected static void carvedWoodRecipe(Block craftingBlock, Block resultBlock, Consumer<FinishedRecipe> output) {
