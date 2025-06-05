@@ -19,6 +19,7 @@ dependencies {
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     compileOnly "curse.maven:every-compat-628539:6566531"
     compileOnly "curse.maven:selene-499980:6507197"
+    implementation "curse.maven:jinxedlib-1203401:6619243"
 }
 
 configurations {

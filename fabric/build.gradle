@@ -16,6 +16,7 @@ dependencies {
     modImplementation "curse.maven:selene-499980:6507199"
     modImplementation "curse.maven:artsandcrafts-1034791:5992025"
     include implementation("blue.endless:jankson:1.2.3")
+    modImplementation "curse.maven:jinxedlib-1203401:6619342"
     implementation project(":common")
 }
 
