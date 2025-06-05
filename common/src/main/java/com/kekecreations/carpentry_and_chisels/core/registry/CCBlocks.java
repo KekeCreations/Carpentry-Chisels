@@ -1,11 +1,11 @@
 package com.kekecreations.carpentry_and_chisels.core.registry;
 
+import com.kekecreations.carpentry_and_chisels.Constants;
 import com.kekecreations.carpentry_and_chisels.common.block.CCSlabBlock;
 import com.kekecreations.carpentry_and_chisels.common.block.CarvedWoodBlock;
 import com.kekecreations.carpentry_and_chisels.common.block.PoleBlock;
-import com.kekecreations.carpentry_and_chisels.core.platform.Services;
+import com.kekecreations.jinxedlib.core.util.JinxedRegistryHelper;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -190,7 +190,7 @@ public class CCBlocks {
 
 
     private static <T extends Block> Supplier<T> registerBlockWithItem(String name, java.util.function.Supplier<T> blockSupplier) {
-        return Services.REGISTRY.registerBlockWithItem(name, blockSupplier);
+        return JinxedRegistryHelper.registerBlock(Constants.MOD_ID, name, true, blockSupplier);
     }
 
     public static void register() {}

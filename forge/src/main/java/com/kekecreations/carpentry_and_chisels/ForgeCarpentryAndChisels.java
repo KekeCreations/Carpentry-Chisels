@@ -1,7 +1,6 @@
 package com.kekecreations.carpentry_and_chisels;
 
 import com.kekecreations.carpentry_and_chisels.common.item.Chiseling;
-import com.kekecreations.carpentry_and_chisels.core.platform.ForgeRegistryHelper;
 import com.kekecreations.carpentry_and_chisels.core.registry.CCBlocks;
 import com.kekecreations.carpentry_and_chisels.core.registry.CCDatapackRegistries;
 import com.kekecreations.carpentry_and_chisels.core.registry.CCItems;

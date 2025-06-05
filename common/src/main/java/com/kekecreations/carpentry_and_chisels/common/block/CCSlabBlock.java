@@ -1,5 +1,6 @@
 package com.kekecreations.carpentry_and_chisels.common.block;
 
+import com.kekecreations.jinxedlib.common.block.FlammableSlabBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -10,13 +11,12 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 import javax.annotation.Nullable;
 
-public class CCSlabBlock extends SlabBlock {
+public class CCSlabBlock extends FlammableSlabBlock {
 
     @Nullable
     Block strippedVariant;
