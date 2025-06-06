@@ -23,9 +23,6 @@ public class ForgeCarpentryAndChisels {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         CarpentryAndChisels.init();
 
-        ForgeRegistryHelper.BLOCKS.register(modEventBus);
-        ForgeRegistryHelper.ITEMS.register(modEventBus);
-
 
         modEventBus.addListener(this::creativeItemGroups);
         modEventBus.addListener(this::datapackRegistry);
