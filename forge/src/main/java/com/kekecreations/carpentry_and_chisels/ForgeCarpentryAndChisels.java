@@ -26,7 +26,6 @@ public class ForgeCarpentryAndChisels {
 
         modEventBus.addListener(this::creativeItemGroups);
         modEventBus.addListener(this::datapackRegistry);
-        
     }
 
     public void datapackRegistry(DataPackRegistryEvent.NewRegistry event) {
