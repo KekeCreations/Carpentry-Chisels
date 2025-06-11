@@ -64,7 +64,7 @@ public class EveryCompatModule {
             .requiresChildren("stripped_log")
             .addRecipe(new ResourceLocation("carpentry_and_chisels:oak_pole"))
             .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("building_blocks")))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/stripped_oak_pole"))
+            .addTexture(new ResourceLocation("minecraft:block/stripped_oak_log"))
             .addTexture(new ResourceLocation("carpentry_and_chisels:block/stripped_oak_pole_top"))
             .defaultRecipe()
             .build();
@@ -76,7 +76,7 @@ public class EveryCompatModule {
             .dropSelf()
             .addRecipe(new ResourceLocation("carpentry_and_chisels:oak_pole"))
             .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("building_blocks")))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/oak_pole"))
+            .addTexture(new ResourceLocation("minecraft:block/oak_log"))
             .addTexture(new ResourceLocation("carpentry_and_chisels:block/oak_pole_top"))
             .build();
 

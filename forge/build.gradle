@@ -55,7 +55,7 @@ dependencies {
 
     modApi "curse.maven:every-compat-628539:6566531"
     modApi "curse.maven:selene-499980:6507197"
-    //modImplementation "curse.maven:artsandcrafts-1034791:5992027"
+    modImplementation "curse.maven:artsandcrafts-1034791:5992027"
     modImplementation("curse.maven:jinxedlib-1203401:6627521")
 }
 
