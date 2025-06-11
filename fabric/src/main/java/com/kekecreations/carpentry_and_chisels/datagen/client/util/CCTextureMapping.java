@@ -33,6 +33,12 @@ public class CCTextureMapping {
                 .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(block))
                 .put(TextureSlot.PARTICLE, TextureMapping.getBlockTexture(block));
     }
+    public static TextureMapping poleNormalTextureMappings(Block block, String string) {
+        return (new TextureMapping())
+                .put(TextureSlot.TOP, new ResourceLocation(TextureMapping.getBlockTexture(block) + "_top"))
+                .put(TextureSlot.SIDE, new ResourceLocation("minecraft:block/" + string + "_log"))
+                .put(TextureSlot.PARTICLE, TextureMapping.getBlockTexture(block));
+    }
 
 
     public static ResourceLocation getCarvedWood(Block block, String pattern) {

@@ -57,27 +57,28 @@ public class EveryCompatModule {
             .defaultRecipe()
             .build();
 
-    static SimpleEntrySet<WoodType, ?> strippedPole = SimpleEntrySet.builder(WoodType.class, "pole", "stripped", CCBlocks.STRIPPED_OAK_LOG_SLAB, ()-> WoodTypeRegistry.OAK_TYPE,
+    static SimpleEntrySet<WoodType, ?> strippedPole = SimpleEntrySet.builder(WoodType.class, "pole", "stripped", CCBlocks.STRIPPED_OAK_POLE, ()-> WoodTypeRegistry.OAK_TYPE,
                     w -> new PoleBlock(null, Utils.copyPropertySafe(w.log)))
             .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
             .dropSelf()
             .requiresChildren("stripped_log")
             .addRecipe(new ResourceLocation("carpentry_and_chisels:oak_pole"))
             .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("building_blocks")))
-            .addTexture(new ResourceLocation("minecraft:block/stripped_oak_log"))
+            .addTexture(new ResourceLocation("carpentry_and_chisels:block/stripped_oak_pole"))
             .addTexture(new ResourceLocation("carpentry_and_chisels:block/stripped_oak_pole_top"))
             .defaultRecipe()
             .build();
 
-    public static SimpleEntrySet<?, ?> pole = SimpleEntrySet.builder(WoodType.class, "pole", CCBlocks.OAK_LOG_SLAB, ()-> WoodTypeRegistry.OAK_TYPE,
+    public static SimpleEntrySet<?, ?> pole = SimpleEntrySet.builder(WoodType.class, "pole", CCBlocks.OAK_POLE, ()-> WoodTypeRegistry.OAK_TYPE,
                     w -> new PoleBlock(strippedPole.blocks.get(w), Utils.copyPropertySafe(w.log)))
             .requiresFromMap(strippedPole.blocks)
             .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
             .dropSelf()
             .addRecipe(new ResourceLocation("carpentry_and_chisels:oak_pole"))
             .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("building_blocks")))
-            .addTexture(new ResourceLocation("minecraft:block/oak_log"))
+            .addTexture(new ResourceLocation("carpentry_and_chisels:block/oak_pole"))
             .addTexture(new ResourceLocation("carpentry_and_chisels:block/oak_pole_top"))
+            .createPaletteFromChild("wood")
             .build();
 
 

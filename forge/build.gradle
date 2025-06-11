@@ -57,6 +57,8 @@ dependencies {
     modApi "curse.maven:selene-499980:6507197"
     modImplementation "curse.maven:artsandcrafts-1034791:5992027"
     modImplementation("curse.maven:jinxedlib-1203401:6627521")
+   // modImplementation("curse.maven:blueprint-382216:6408581")
+    //modImplementation("curse.maven:upgrade-aquatic-326895:6393133")
 }
 
 jar {

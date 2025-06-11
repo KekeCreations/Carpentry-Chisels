@@ -2,7 +2,7 @@
   "parent": "carpentry_and_chisels:block/pole",
   "textures": {
     "particle": "carpentry_and_chisels:block/stripped_oak_pole",
-    "side": "carpentry_and_chisels:block/stripped_oak_pole",
+    "side": "minecraft:block/stripped_oak_log",
     "top": "carpentry_and_chisels:block/stripped_oak_pole_top"
   }
 }

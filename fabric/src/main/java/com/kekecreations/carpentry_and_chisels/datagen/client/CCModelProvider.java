@@ -64,8 +64,8 @@ public class CCModelProvider extends FabricModelProvider {
         slab(generator, CCBlocks.WARPED_STEM_SLAB.get(), Blocks.WARPED_STEM);
         slab(generator, CCBlocks.STRIPPED_WARPED_STEM_SLAB.get(), Blocks.STRIPPED_WARPED_STEM);
 
-        pole(generator, CCBlocks.OAK_POLE.get());
-        pole(generator, CCBlocks.STRIPPED_OAK_POLE.get());
+        poleNormal(generator, CCBlocks.OAK_POLE.get(), "oak");
+        poleNormal(generator, CCBlocks.STRIPPED_OAK_POLE.get(), "stripped_oak");
         pole(generator, CCBlocks.DARK_OAK_POLE.get());
         pole(generator, CCBlocks.STRIPPED_DARK_OAK_POLE.get());
         pole(generator, CCBlocks.ACACIA_POLE.get());
@@ -142,6 +142,11 @@ public class CCModelProvider extends FabricModelProvider {
 
     public static void pole(BlockModelGenerators generator, Block block) {
         ResourceLocation model = CCModelTemplate.POLE.create(block, CCTextureMapping.poleTextureMappings(block), generator.modelOutput);
+        generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(block, Variant.variant().with(VariantProperties.MODEL, model)));
+    }
+
+    public static void poleNormal(BlockModelGenerators generator, Block block, String string) {
+        ResourceLocation model = CCModelTemplate.POLE.create(block, CCTextureMapping.poleNormalTextureMappings(block, string), generator.modelOutput);
         generator.blockStateOutput.accept(MultiVariantGenerator.multiVariant(block, Variant.variant().with(VariantProperties.MODEL, model)));
     }
 }
