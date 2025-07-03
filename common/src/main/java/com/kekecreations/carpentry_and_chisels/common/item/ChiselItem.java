@@ -36,7 +36,15 @@ public class ChiselItem extends Item {
     public ChiselItem(float attackDamage, Properties properties) {
         super(properties.component(CCDataComponents.CHISEL_PATTERN.get(), 0));
         this.attackDamage = attackDamage;
-        ItemAttributeModifiers.builder().add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID,  this.attackDamage, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.MAINHAND).build();
+    }
+
+    public static ItemAttributeModifiers createAttributes(int attackDamage) {
+        return ItemAttributeModifiers.builder()
+                .add(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_ID,  attackDamage, AttributeModifier.Operation.ADD_VALUE),
+                        EquipmentSlotGroup.MAINHAND)
+                .add(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_ID, -1, AttributeModifier.Operation.ADD_VALUE),
+                        EquipmentSlotGroup.MAINHAND)
+                .build();
     }
 
     public float getDamage() {
@@ -68,9 +76,13 @@ public class ChiselItem extends Item {
         ItemStack itemStack = useOnContext.getItemInHand();
         InteractionHand hand = useOnContext.getHand();
 
-        if (!level.isClientSide() && ChiselUtils.getFinalBlock(level.registryAccess(), blockState) != null) {
+        if (!level.isClientSide() && ChiselUtils.getFinalBlock(level.registryAccess(), blockState) != null && player != null) {
             level.setBlockAndUpdate(blockPos, ChiselUtils.getFinalBlock(level.registryAccess(), blockState).defaultBlockState());
-            itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+            if (hand == InteractionHand.MAIN_HAND) {
+                itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+            } else {
+                itemStack.hurtAndBreak(1, player, EquipmentSlot.OFFHAND);
+            }
             level.playSound(null, blockPos, blockState.getSoundType().getPlaceSound(), SoundSource.BLOCKS, 1.0F, 1.0F);
             return InteractionResult.sidedSuccess(true);
         }
@@ -91,13 +103,21 @@ public class ChiselItem extends Item {
                         } else {
                             level.setBlockAndUpdate(blockPos, blockState.setValue(CarvedWoodBlock.PATTERN, 0));
                         }
-                        itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                        if (hand == InteractionHand.MAIN_HAND) {
+                            itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                        } else {
+                            itemStack.hurtAndBreak(1, player, EquipmentSlot.OFFHAND);
+                        }
                         level.playSound(null, blockPos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
                         return InteractionResult.sidedSuccess(true);
                     } else {
                         if (getPattern(itemStack) != blockState.getValue(CarvedWoodBlock.PATTERN)) {
                             level.setBlockAndUpdate(blockPos, blockState.setValue(CarvedWoodBlock.PATTERN, getPattern(itemStack)));
-                            itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                            if (hand == InteractionHand.MAIN_HAND) {
+                                itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+                            } else {
+                                itemStack.hurtAndBreak(1, player, EquipmentSlot.OFFHAND);
+                            }
                             level.playSound(null, blockPos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
                             return InteractionResult.sidedSuccess(true);
                         }
