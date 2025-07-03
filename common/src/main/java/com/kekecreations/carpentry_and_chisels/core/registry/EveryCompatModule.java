@@ -1,5 +1,6 @@
 package com.kekecreations.carpentry_and_chisels.core.registry;
 
+import com.kekecreations.carpentry_and_chisels.CarpentryAndChisels;
 import com.kekecreations.carpentry_and_chisels.Constants;
 import com.kekecreations.carpentry_and_chisels.common.block.CCSlabBlock;
 import com.kekecreations.carpentry_and_chisels.common.block.CarvedWoodBlock;
@@ -23,16 +24,16 @@ public class EveryCompatModule {
                     w -> new CarvedWoodBlock(Utils.copyPropertySafe(w.planks)))
             .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
             .dropSelf()
-            .addRecipe(new ResourceLocation("carpentry_and_chisels:carved_oak_wood"))
-            .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("building_blocks")))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/carved_oak_wood_0"))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/carved_oak_wood_1"))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/carved_oak_wood_2"))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/carved_oak_wood_3"))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/carved_oak_wood_4"))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/carved_oak_wood_5"))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/carved_oak_wood_6"))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/carved_oak_wood_7"))
+            .addRecipe(CarpentryAndChisels.id("carved_oak_wood"))
+            .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.withDefaultNamespace("building_blocks")))
+            .addTexture(CarpentryAndChisels.id("block/carved_oak_wood_0"))
+            .addTexture(CarpentryAndChisels.id("block/carved_oak_wood_1"))
+            .addTexture(CarpentryAndChisels.id("block/carved_oak_wood_2"))
+            .addTexture(CarpentryAndChisels.id("block/carved_oak_wood_3"))
+            .addTexture(CarpentryAndChisels.id("block/carved_oak_wood_4"))
+            .addTexture(CarpentryAndChisels.id("block/carved_oak_wood_5"))
+            .addTexture(CarpentryAndChisels.id("block/carved_oak_wood_6"))
+            .addTexture(CarpentryAndChisels.id("block/carved_oak_wood_7"))
             .build();
 
     static SimpleEntrySet<WoodType, ?> strippedLogSlab = SimpleEntrySet.builder(WoodType.class, "log_slab", "stripped", CCBlocks.STRIPPED_OAK_LOG_SLAB, ()-> WoodTypeRegistry.OAK_TYPE,
@@ -40,9 +41,9 @@ public class EveryCompatModule {
             .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
             .copyParentDrop()
             .requiresChildren("stripped_log")
-            .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("building_blocks")))
-            .addTexture(new ResourceLocation("minecraft:block/stripped_oak_log"))
-            .addTexture(new ResourceLocation("minecraft:block/stripped_oak_log_top"))
+            .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.withDefaultNamespace("building_blocks")))
+            .addTexture(ResourceLocation.withDefaultNamespace("block/stripped_oak_log"))
+            .addTexture(ResourceLocation.withDefaultNamespace("block/stripped_oak_log_top"))
             .defaultRecipe()
             .build();
 
@@ -51,9 +52,9 @@ public class EveryCompatModule {
             .requiresFromMap(strippedLogSlab.blocks)
             .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
             .copyParentDrop()
-            .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("building_blocks")))
-            .addTexture(new ResourceLocation("minecraft:block/oak_log"))
-            .addTexture(new ResourceLocation("minecraft:block/oak_log_top"))
+            .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.withDefaultNamespace("building_blocks")))
+            .addTexture(ResourceLocation.withDefaultNamespace("block/oak_log"))
+            .addTexture(ResourceLocation.withDefaultNamespace("block/oak_log_top"))
             .defaultRecipe()
             .build();
 
@@ -62,10 +63,10 @@ public class EveryCompatModule {
             .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
             .dropSelf()
             .requiresChildren("stripped_log")
-            .addRecipe(new ResourceLocation("carpentry_and_chisels:oak_pole"))
-            .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("building_blocks")))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/stripped_oak_pole"))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/stripped_oak_pole_top"))
+            .addRecipe(CarpentryAndChisels.id("oak_pole"))
+            .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.withDefaultNamespace("building_blocks")))
+            .addTexture(CarpentryAndChisels.id("block/stripped_oak_pole"))
+            .addTexture(CarpentryAndChisels.id("block/stripped_oak_pole_top"))
             .defaultRecipe()
             .build();
 
@@ -74,10 +75,10 @@ public class EveryCompatModule {
             .requiresFromMap(strippedPole.blocks)
             .addTag(BlockTags.MINEABLE_WITH_AXE, Registries.BLOCK)
             .dropSelf()
-            .addRecipe(new ResourceLocation("carpentry_and_chisels:oak_pole"))
-            .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation("building_blocks")))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/oak_pole"))
-            .addTexture(new ResourceLocation("carpentry_and_chisels:block/oak_pole_top"))
+            .addRecipe(CarpentryAndChisels.id("oak_pole"))
+            .setTabKey(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ResourceLocation.withDefaultNamespace("building_blocks")))
+            .addTexture(CarpentryAndChisels.id("block/oak_pole"))
+            .addTexture(CarpentryAndChisels.id("block/oak_pole_top"))
             .createPaletteFromChild("wood")
             .build();
 

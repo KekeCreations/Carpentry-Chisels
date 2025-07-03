@@ -2,10 +2,7 @@ package com.kekecreations.carpentry_and_chisels;
 
 
 import com.kekecreations.carpentry_and_chisels.core.platform.Services;
-import com.kekecreations.carpentry_and_chisels.core.registry.CCBlocks;
-import com.kekecreations.carpentry_and_chisels.core.registry.CCDatapackRegistries;
-import com.kekecreations.carpentry_and_chisels.core.registry.CCItems;
-import com.kekecreations.carpentry_and_chisels.core.registry.EveryCompatModule;
+import com.kekecreations.carpentry_and_chisels.core.registry.*;
 import net.minecraft.resources.ResourceLocation;
 
 public class CarpentryAndChisels {
@@ -14,6 +11,7 @@ public class CarpentryAndChisels {
 
     public static void init() {
         CCDatapackRegistries.register();
+        CCDataComponents.registerComponents();
         CCItems.register();
         CCBlocks.register();
         if (Services.PLATFORM.isModLoaded("everycomp")) {
@@ -22,6 +20,6 @@ public class CarpentryAndChisels {
     }
 
     public static ResourceLocation id(String name) {
-        return new ResourceLocation(Constants.MOD_ID, name);
+        return ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, name);
     }
 }

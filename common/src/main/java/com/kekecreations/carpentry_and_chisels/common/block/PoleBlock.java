@@ -5,6 +5,8 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
@@ -38,22 +40,25 @@ public class PoleBlock extends Block {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        ItemStack itemStack = player.getItemInHand(hand);
+    public ItemInteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult blockHitResult) {
         if (!level.isClientSide()) {
             if (itemStack.getItem() instanceof AxeItem) {
                 if (strippedVariant != null) {
                     stripAxe(level, itemStack, player, hand, pos, state, strippedVariant);
-                    return InteractionResult.SUCCESS;
+                    return ItemInteractionResult.SUCCESS;
                 }
             }
         }
-        return InteractionResult.PASS;
+        return ItemInteractionResult.FAIL;
     }
 
     public void stripAxe(Level level, ItemStack itemStack, Player player, InteractionHand hand, BlockPos pos, BlockState state, Block strippedAxe) {
         level.setBlockAndUpdate(pos, strippedAxe.defaultBlockState());
-        itemStack.hurtAndBreak(1, player, (entity) -> entity.broadcastBreakEvent(hand));
+        if (hand == InteractionHand.MAIN_HAND) {
+            itemStack.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
+        } else {
+            itemStack.hurtAndBreak(1, player, EquipmentSlot.OFFHAND);
+        }
         level.playSound(null, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
     }
 }

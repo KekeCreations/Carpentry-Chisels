@@ -1,5 +1,5 @@
 modLoader = "javafml" #mandatory
-loaderVersion = "${forge_loader_version_range}" #mandatory This is typically bumped every Minecraft version by Forge. See https://files.minecraftforge.net/ for a list of versions.
+loaderVersion = "${neoforge_loader_version_range}" #mandatory This is typically bumped every Minecraft version by Forge. See https://files.minecraftforge.net/ for a list of versions.
 license = "${license}" # Review your options at https://choosealicense.com/.
 issueTrackerURL="https://github.com/KekeCreations/Carpentry-Chisels" #optional
 [[mods]] #mandatory
@@ -12,9 +12,9 @@ logoFile = "carpentry_and_chisels.png" #optional (needs to be in the root of you
 authors = "${mod_author}" #optional
 description = '''${description}''' #mandatory (Supports multiline text)
 [[dependencies.${mod_id}]] #optional
-modId = "forge" #mandatory
+modId = "neoforge" #mandatory
 mandatory = true #mandatory
-versionRange = "[${forge_version},)" #mandatory
+versionRange = "[${neoforge_version},)" #mandatory
 ordering = "NONE" # The order that this dependency should load in relation to your mod, required to be either 'BEFORE' or 'AFTER' if the dependency is not mandatory
 side = "BOTH" # Side this dependency is applied on - 'BOTH', 'CLIENT' or 'SERVER'
 [[dependencies.${mod_id}]]
@@ -27,6 +27,6 @@ side = "BOTH"
 [[dependencies.${mod_id}]]
 modId = "jinxedlib"
 mandatory = true
-versionRange = "[1.0.0,)"
+versionRange = "[1.0.3,)"
 ordering = "NONE"
 side = "BOTH"

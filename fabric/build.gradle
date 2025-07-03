@@ -10,19 +10,16 @@ dependencies {
     }
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
-    modImplementation "curse.maven:modmenu-308702:5162837"
-    modImplementation "curse.maven:every-compat-628539:6566532"
-    modImplementation "curse.maven:selene-499980:6507199"
-    modImplementation "curse.maven:artsandcrafts-1034791:5992025"
-    include implementation("blue.endless:jankson:1.2.3")
-    modImplementation "curse.maven:jinxedlib-1203401:6627520"
-    implementation project(":common")
+
+    modImplementation "curse.maven:jinxedlib-1203401:6332453"
+    modImplementation "curse.maven:every-compat-628539:6715769"
+    modImplementation "curse.maven:selene-499980:6699384"
 }
 
 loom {
-    if (project(":common").file("src/main/resources/${mod_id}.accesswidener").exists()) {
-        accessWidenerPath.set(project(":common").file("src/main/resources/${mod_id}.accesswidener"))
+    def aw = project(':common').file("src/main/resources/${mod_id}.accesswidener")
+    if (aw.exists()) {
+        accessWidenerPath.set(aw)
     }
     mixin {
         defaultRefmapName.set("${mod_id}.refmap.json")
@@ -30,39 +27,15 @@ loom {
     runs {
         client {
             client()
-            setConfigName("Fabric Client")
+            setConfigName('Fabric Client')
             ideConfigGenerated(true)
-            runDir("run")
+            runDir('runs/client')
         }
         server {
             server()
-            setConfigName("Fabric Server")
+            setConfigName('Fabric Server')
             ideConfigGenerated(true)
-            runDir("run")
-        }
-        datagen {
-            inherit client
-            name "Data Generation"
-            vmArg "-Dfabric-api.datagen"
-            vmArg "-Dfabric-api.datagen.output-dir=${file("../common/src/main/generated/")}"
-            vmArg "-Dfabric-api.datagen.modid=carpentry_and_chisels"
-
-            runDir "build/datagen"
+            runDir('runs/server')
         }
     }
-}
-tasks.withType(JavaCompile).configureEach {
-    source(project(":common").sourceSets.main.allSource)
-}
-tasks.withType(Javadoc).configureEach {
-    source(project(":common").sourceSets.main.allJava)
-}
-tasks.named("sourcesJar", Jar) {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    from(project(":common").sourceSets.main.allSource)
-}
-
-processResources {
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    from project(":common").sourceSets.main.resources
 }
