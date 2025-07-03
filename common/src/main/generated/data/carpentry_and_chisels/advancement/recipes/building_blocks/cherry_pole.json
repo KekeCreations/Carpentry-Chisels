@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "cherry_pole": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:cherry_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cherry_pole"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "cherry_pole"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cherry_pole"
+    ]
+  }
+}

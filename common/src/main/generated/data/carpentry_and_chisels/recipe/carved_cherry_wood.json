@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:cherry_slab"
+    }
+  },
+  "pattern": [
+    "KK"
+  ],
+  "result": {
+    "count": 1,
+    "id": "carpentry_and_chisels:carved_cherry_wood"
+  }
+}

@@ -16,7 +16,6 @@ public class CCDataGenerator implements DataGeneratorEntrypoint {
 
         // Server Data
         pack.addProvider(CCBlockTagProvider::new);
-        //pack.addProvider(ACCItemTagProvider::new);
         pack.addProvider(CCRecipeProvider::new);
         pack.addProvider(CCBlockLootTableProvider::new);
 

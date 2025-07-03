@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "K": {
+      "item": "minecraft:mangrove_log"
+    }
+  },
+  "pattern": [
+    "KKK"
+  ],
+  "result": {
+    "count": 6,
+    "id": "carpentry_and_chisels:mangrove_log_slab"
+  }
+}

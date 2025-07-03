@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "carved_crimson_hyphae": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:crimson_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:carved_crimson_hyphae"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "carved_crimson_hyphae"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:carved_crimson_hyphae"
+    ]
+  }
+}

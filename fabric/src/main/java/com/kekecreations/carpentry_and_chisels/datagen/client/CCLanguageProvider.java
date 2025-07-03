@@ -4,15 +4,19 @@ import com.kekecreations.carpentry_and_chisels.core.registry.CCBlocks;
 import com.kekecreations.carpentry_and_chisels.core.registry.CCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.core.HolderLookup;
+
+import java.util.concurrent.CompletableFuture;
 
 public class CCLanguageProvider extends FabricLanguageProvider {
 
-    public CCLanguageProvider(FabricDataOutput dataOutput) {
-        super(dataOutput);
+
+    public CCLanguageProvider(FabricDataOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
+        super(dataOutput, registryLookup);
     }
 
     @Override
-    public void generateTranslations(TranslationBuilder builder) {
+    public void generateTranslations(HolderLookup.Provider registryLookup, TranslationBuilder builder) {
         builder.add(CCBlocks.CARVED_OAK_WOOD.get(), "Carved Oak Wood");
         builder.add(CCBlocks.CARVED_DARK_OAK_WOOD.get(), "Carved Dark Oak Wood");
         builder.add(CCBlocks.CARVED_ACACIA_WOOD.get(), "Carved Acacia Wood");

@@ -4,22 +4,24 @@ import com.kekecreations.carpentry_and_chisels.core.registry.CCBlocks;
 import com.kekecreations.carpentry_and_chisels.core.registry.CCItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 public class CCRecipeProvider extends FabricRecipeProvider {
-    public CCRecipeProvider(FabricDataOutput output) {
-        super(output);
+
+    public CCRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+        super(output, registriesFuture);
     }
 
     @Override
-    public void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    public void buildRecipes(RecipeOutput consumer) {
         carvedWoodRecipe(Blocks.OAK_SLAB, CCBlocks.CARVED_OAK_WOOD.get(), consumer);
         carvedWoodRecipe(Blocks.DARK_OAK_SLAB, CCBlocks.CARVED_DARK_OAK_WOOD.get(), consumer);
         carvedWoodRecipe(Blocks.ACACIA_SLAB, CCBlocks.CARVED_ACACIA_WOOD.get(), consumer);
@@ -91,7 +93,7 @@ public class CCRecipeProvider extends FabricRecipeProvider {
                 .save(consumer, getItemName(CCItems.CHISEL.get()));
     }
 
-    protected static void carvedWoodRecipe(Block craftingBlock, Block resultBlock, Consumer<FinishedRecipe> output) {
+    protected static void carvedWoodRecipe(Block craftingBlock, Block resultBlock, RecipeOutput output) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,1)
                 .pattern("KK")
                 .define('K', craftingBlock)
@@ -99,7 +101,7 @@ public class CCRecipeProvider extends FabricRecipeProvider {
                 .save(output, getItemName(resultBlock));
     }
 
-    protected static void slabRecipe(Block craftingBlock, Block resultBlock, Consumer<FinishedRecipe> output) {
+    protected static void slabRecipe(Block craftingBlock, Block resultBlock, RecipeOutput output) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,6)
                 .pattern("KKK")
                 .define('K', craftingBlock)
@@ -107,7 +109,7 @@ public class CCRecipeProvider extends FabricRecipeProvider {
                 .save(output, getItemName(resultBlock));
     }
 
-    protected static void poleRecipe(Block craftingBlock, Block resultBlock, Consumer<FinishedRecipe> output) {
+    protected static void poleRecipe(Block craftingBlock, Block resultBlock, RecipeOutput output) {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, resultBlock ,4)
                 .pattern("K")
                 .pattern("K")
