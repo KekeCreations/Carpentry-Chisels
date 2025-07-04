@@ -15,7 +15,7 @@ public class CarpentryAndChisels {
         CCItems.register();
         CCBlocks.register();
         if (Services.PLATFORM.isModLoaded("everycomp")) {
-            EveryCompatModule.register();
+            CCAddModules.init();
         }
     }
 
