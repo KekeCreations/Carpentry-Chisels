@@ -53,8 +53,8 @@ dependencies {
     implementation(annotationProcessor("io.github.llamalad7:mixinextras-common:${mixin_extras_version}"))
     implementation("io.github.llamalad7:mixinextras-forge:${mixin_extras_version}")
 
-    modApi "curse.maven:every-compat-628539:6566531"
-    modApi "curse.maven:selene-499980:6507197"
+    modApi("curse.maven:every-compat-628539:6884861")
+    modApi("curse.maven:selene-499980:6877879")
     modImplementation "curse.maven:artsandcrafts-1034791:5992027"
     modImplementation("curse.maven:jinxedlib-1203401:6627521")
    // modImplementation("curse.maven:blueprint-382216:6408581")
